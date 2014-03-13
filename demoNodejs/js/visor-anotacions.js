@@ -1,4 +1,4 @@
-//Visor anotacions
+//Annotator viewer
 (function() {
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = {}.hasOwnProperty,
@@ -158,7 +158,7 @@
             }, 2000);
           } 
       });
-      //Afegim informació de l'anotació en l'emelemnt data per poder esborarr-la
+      
       $('#'+anotation_reference).data('annotation', annotation);
       $(anotacioObject).fadeIn('fast');
     };
