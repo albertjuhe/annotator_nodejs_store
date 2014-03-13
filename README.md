@@ -70,6 +70,8 @@ After the excution you can find a log files in the log folder.
 
 ##Development
 
+The core of teh annotator has been modified.
+
 1)All the routing in the nodejs application are in the lib\rest\buffer.js
 2)update annotation: app.put('/annotation/update/:username/:code/:id', function(req, res)
 3)delete annotation app.delete('/annotation/destroy/:username/:code/:id', function(req, res) 
