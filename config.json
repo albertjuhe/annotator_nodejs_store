@@ -1,0 +1,10 @@
+ {
+    "materials": "http://localhost/demoNodejs/",
+    "server": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "annotations",   
+    "database_port":3306,
+    "port": 3000
+
+}
