@@ -3,8 +3,8 @@ Annotator with Nodejs + express + socket.io + MySQL
 
 ##Annotator with Nodejs + express + socket.io + MySQL
 
-Is a Sample and simple aplication than uses the Annotateit, nodejs and Mysql as a backend.
-There is a folder called demoNodejs, this contains a sample html with annotateit, a category plug-in and a panel viewer plugin. From this sample you can export annotations to PDF.
+Is a sample and a simple aplication than uses the Annotateit (http://annotateit.org/) with nodejs and Mysql as a back store.
+There is a folder called demoNodejs, this contains a sample html with annotateit(http://annotateit.org/) and several plug-ins, a category plug-in, store plug-in, and a panel viewer plugin (https://github.com/okfn/annotator/wiki). From this sample you can export annotations to PDF.
 
 You can execute after the installation with:
 node node_aplicaction_folder/app.js
