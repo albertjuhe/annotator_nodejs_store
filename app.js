@@ -8,14 +8,14 @@ var config = require('./config.json');
 
 __dirname = 'C:\\wamp_server\\www\\demoNodejs\\';
 
-//Configuració dels locale del i18n
+//Language configuration
 i18n.configure({
     locales:['ca','es','en', 'fr'],
     directory: __dirname + 'locale',
     defaultLocale: 'en'
 });
 
-// Configuració del logger
+// Logger configuration
 log4js.configure({
  appenders: [
    { type: 'console', category: 'loggerAnotacionsConsole' },
@@ -81,7 +81,7 @@ io.sockets.on('connection', function(socket){
     for(var room in rooms) {
         room = room.replace('/',''); //Important
         if(room){
-          //socket.leave(room);          
+                  
           var counter_refresh = setTimeout(function(){
             io.sockets.in(room).emit('notification', { online:io.sockets.clients(room).length});
             clearTimeout(counter_refresh)
