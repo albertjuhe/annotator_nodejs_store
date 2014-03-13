@@ -19,15 +19,15 @@ In the annotator display panel you can see the users that are currently viewing 
 ##Installation
 
 You need install several in the nodejs folder package before start (npm install):
-- express
-- i18n
-- log4js
+- express (http://expressjs.com/)
+- i18n (https://github.com/mashpie/i18n-node)
+- log4js (https://github.com/nomiddlename/log4js-node)
 - underscore
 - mysql
 - http
 - request
 - pdfkit
-- socket.io
+- socket.io (http://socket.io/)
 
 Copy the content of the github into the nodejs folder.
 Inside this folder there is a file called config.json, is the config file.
