@@ -3,18 +3,19 @@ Annotator with Nodejs + express + socket.io + MySQL
 
 ##Annotator with Nodejs + express + socket.io + MySQL
 
-Is a sample and a simple aplication than uses the Annotateit (http://annotateit.org/) with nodejs and Mysql as a back store.
-There is a folder called demoNodejs, this contains a sample html with annotateit(http://annotateit.org/) and several plug-ins, a category plug-in, store plug-in, and a panel viewer plugin (https://github.com/okfn/annotator/wiki). From this sample you can export annotations to PDF.
+Is a sample and a simple aplication that uses the Annotateit (http://annotateit.org/) with nodejs and Mysql as a back store.
+There is a folder called demoNodejs, this folder contains a  demo and several plug-ins, a category plug-in, store plug-in, and a panel viewer plugin (https://github.com/okfn/annotator/wiki). 
+This aplication let you store, delete and update annotations, export anotations to PDF, display annotations in a right panel viewerand categorize this annotations.
+The annotations are displayed in the right panel with an icon for deleting, and a little eye, it means that the annotations is shared. I fyou are the owner of the annotations your username is displayed in a white background, if not it is displayed ina brown background.
 
-You can execute after the installation with:
-node node_aplicaction_folder/app.js
-with the browswer:
+You can execute after the installation with: node node_aplicaction_folder/app.js
+You can try with this URL:
 http://localhost:3000/annotation/testuser1/demo.html
 and test with other users
 http://localhost:3000/annotation/testuser2/demo.html
 http://localhost:3000/annotation/testuser3/demo.html
 
-In the annotator display panel you can see the users that are currently viewing the same content.
+In the annotator display panel you can see the users that are currently viewing the same content, the same contens means the same HTML file.
 
 ##Installation
 
