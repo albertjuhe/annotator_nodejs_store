@@ -152,7 +152,7 @@ Inside the file demoNodejs/demo.html you can find the store plug-in configuratio
            
       });
       </script>
-      ```
+```
 
       The content of the variable propietary are overwrite by the nodejs,   
 
