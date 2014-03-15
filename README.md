@@ -57,7 +57,9 @@ You have to copy the folder: demoNodejs into your http server (ex:C:\wamp_server
 For the PDF export anotations, you have to copy the folder fonts and img in the root folder of nodejs.
 After this you have to update the app.js file, you have to change the line:
 
+```nodejs
  __dirname = 'C:\\wamp_server\\www\\demoNodejs\\';
+```
 
  and change for the folder where are the js,css,locale,etc..., if you follow the installation steps you can't change this line.
 
