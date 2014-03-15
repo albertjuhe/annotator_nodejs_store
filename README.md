@@ -73,18 +73,18 @@ After the excution you can find a log files in the log folder.
 
 ##Development
 
-The core of teh annotator has been modified.
+Atention:The core of thh annotator has been modified.
 
-1)All the routing in the nodejs application are in the lib\rest\buffer.js
-2)update annotation: app.put('/annotation/update/:username/:code/:id', function(req, res)
-3)delete annotation app.delete('/annotation/destroy/:username/:code/:id', function(req, res) 
-4)get annotations app.get('/annotation/get/:username/:code', function(req, res)
-5)get HTML file and render: app.get('/annotation/:username/:code.html', function(req, res)
-6)new annotation: app.post('/annotation/new/:username/:code', function(req, res)
-7)get annotations in pdf format: app.get('/annotation/:username/:code.pdf', function(req, res)
+- All the routing in the nodejs application are in the lib\rest\buffer.js
+- update annotation: app.put('/annotation/update/:username/:code/:id', function(req, res)
+- delete annotation app.delete('/annotation/destroy/:username/:code/:id', function(req, res) 
+- get annotations app.get('/annotation/get/:username/:code', function(req, res)
+- get HTML file and render: app.get('/annotation/:username/:code.html', function(req, res)
+- new annotation: app.post('/annotation/new/:username/:code', function(req, res)
+- get annotations in pdf format: app.get('/annotation/:username/:code.pdf', function(req, res)
 
 When a user is displaying a document for example:
-http://localhost:3000/annotation/testuser2/demo.html nodejs are executing (1), search in the anotacions table, all the annotations belonging to testuser2 with code equal to demo.
+http://localhost:3000/annotation/testuser2/demo.html nodejs are executing (get), search in the anotacions table, all the annotations belonging to testuser2 with code equal to demo.
 
 
 ##Database
