@@ -1,5 +1,5 @@
 /*
-Annotator view panel Plugin v1.0 (https://https://github.com/albertjuhe/annotator_nodejs_store
+Annotator nodejs store (https://https://github.com/albertjuhe/annotator_nodejs_store
 Copyright (C) 2014 Albert Juhé Brugué
 License: https://github.com/albertjuhe/annotator_nodejs_store/License.rst
 
