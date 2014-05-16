@@ -124,6 +124,7 @@ Inside the file demoNodejs/demo.html you can find the store plug-in configuratio
                            destacat:'annotator-hl-destacat',
                            subratllat:'annotator-hl-subratllat' }
                      );
+                   $('body').annotator().annotator('addPlugin', 'RichEditor');
                    $('body').annotator().annotator('addPlugin', 'Markdown');
                    $('body').annotator('addPlugin', 'Store', {
                         prefix: 'http://localhost:3000/annotation',
