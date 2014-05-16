@@ -3,31 +3,32 @@ Annotator with Nodejs + express + socket.io + MySQL
 
 ##Annotator with Nodejs + express + socket.io + MySQL
 
-Is a Sample and simple aplication than uses the Annotateit, nodejs and Mysql as a backend.
-There is a folder called demoNodejs, this contains a sample html with annotateit, a category plug-in and a panel viewer plugin. From this sample you can export annotations to PDF.
+Is a sample and a simple aplication that uses the Annotateit (http://annotateit.org/) with nodejs and Mysql as a back store.
+There is a folder called demoNodejs, this folder contains a  demo and several plug-ins, a category plug-in, store plug-in, and a panel viewer plugin (https://github.com/okfn/annotator/wiki). 
+This aplication let you store, delete and update annotations, export anotations to PDF, display annotations in a right panel viewerand categorize this annotations.
+The annotations are displayed in the right panel with an icon for deleting, and a little eye, it means that the annotations is shared. I fyou are the owner of the annotations your username is displayed in a white background, if not it is displayed ina brown background.
 
-You can execute after the installation with:
-node node_aplicaction_folder/app.js
-with the browswer:
+You can execute after the installation with: node node_aplicaction_folder/app.js
+You can try with this URL:
 http://localhost:3000/annotation/testuser1/demo.html
 and test with other users
 http://localhost:3000/annotation/testuser2/demo.html
 http://localhost:3000/annotation/testuser3/demo.html
 
-In the annotator display panel you can see the users that are currently viewing the same content.
+In the annotator display panel you can see the users that are currently viewing the same content, the same contens means the same HTML file.
 
 ##Installation
 
 You need install several in the nodejs folder package before start (npm install):
-- express
-- i18n
-- log4js
+- express (http://expressjs.com/)
+- i18n (https://github.com/mashpie/i18n-node)
+- log4js (https://github.com/nomiddlename/log4js-node)
 - underscore
 - mysql
 - http
 - request
 - pdfkit
-- socket.io
+- socket.io (http://socket.io/)
 
 Copy the content of the github into the nodejs folder.
 Inside this folder there is a file called config.json, is the config file.
@@ -56,7 +57,9 @@ You have to copy the folder: demoNodejs into your http server (ex:C:\wamp_server
 For the PDF export anotations, you have to copy the folder fonts and img in the root folder of nodejs.
 After this you have to update the app.js file, you have to change the line:
 
+```nodejs
  __dirname = 'C:\\wamp_server\\www\\demoNodejs\\';
+```
 
  and change for the folder where are the js,css,locale,etc..., if you follow the installation steps you can't change this line.
 
@@ -70,16 +73,18 @@ After the excution you can find a log files in the log folder.
 
 ##Development
 
-1)All the routing in the nodejs application are in the lib\rest\buffer.js
-2)update annotation: app.put('/annotation/update/:username/:code/:id', function(req, res)
-3)delete annotation app.delete('/annotation/destroy/:username/:code/:id', function(req, res) 
-4)get annotations app.get('/annotation/get/:username/:code', function(req, res)
-5)get HTML file and render: app.get('/annotation/:username/:code.html', function(req, res)
-6)new annotation: app.post('/annotation/new/:username/:code', function(req, res)
-7)get annotations in pdf format: app.get('/annotation/:username/:code.pdf', function(req, res)
+Atention:The core of thh annotator has been modified.
+
+- All the routing in the nodejs application are in the lib\rest\buffer.js
+- update annotation: app.put('/annotation/update/:username/:code/:id', function(req, res)
+- delete annotation app.delete('/annotation/destroy/:username/:code/:id', function(req, res) 
+- get annotations app.get('/annotation/get/:username/:code', function(req, res)
+- get HTML file and render: app.get('/annotation/:username/:code.html', function(req, res)
+- new annotation: app.post('/annotation/new/:username/:code', function(req, res)
+- get annotations in pdf format: app.get('/annotation/:username/:code.pdf', function(req, res)
 
 When a user is displaying a document for example:
-http://localhost:3000/annotation/testuser2/demo.html nodejs are executing (1), search in the anotacions table, all the annotations belonging to testuser2 with code equal to demo.
+http://localhost:3000/annotation/testuser2/demo.html nodejs are executing (get), search in the anotacions table, all the annotations belonging to testuser2 with code equal to demo.
 
 
 ##Database
@@ -147,7 +152,7 @@ Inside the file demoNodejs/demo.html you can find the store plug-in configuratio
            
       });
       </script>
-      ```
+```
 
       The content of the variable propietary are overwrite by the nodejs,   
 

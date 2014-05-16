@@ -1,3 +1,22 @@
+/*
+Annotator nodejs store (https://https://github.com/albertjuhe/annotator_nodejs_store
+Copyright (C) 2014 Albert Juhé Brugué
+License: https://github.com/albertjuhe/annotator_nodejs_store/License.rst
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+*/
 var express = require('express'),
     app = express()
   , http = require('http')
@@ -8,14 +27,14 @@ var config = require('./config.json');
 
 __dirname = 'C:\\wamp_server\\www\\demoNodejs\\';
 
-//Configuració dels locale del i18n
+//Language configuration
 i18n.configure({
     locales:['ca','es','en', 'fr'],
     directory: __dirname + 'locale',
     defaultLocale: 'en'
 });
 
-// Configuració del logger
+// Logger configuration
 log4js.configure({
  appenders: [
    { type: 'console', category: 'loggerAnotacionsConsole' },
@@ -81,7 +100,7 @@ io.sockets.on('connection', function(socket){
     for(var room in rooms) {
         room = room.replace('/',''); //Important
         if(room){
-          //socket.leave(room);          
+                  
           var counter_refresh = setTimeout(function(){
             io.sockets.in(room).emit('notification', { online:io.sockets.clients(room).length});
             clearTimeout(counter_refresh)
