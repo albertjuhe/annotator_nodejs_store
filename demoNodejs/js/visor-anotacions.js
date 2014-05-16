@@ -1,4 +1,22 @@
-//Visor anotacions
+/*
+Annotator nodejs store (https://https://github.com/albertjuhe/annotator_nodejs_store
+Copyright (C) 2014 Albert Juhé Brugué
+License: https://github.com/albertjuhe/annotator_nodejs_store/License.rst
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+*/
 (function() {
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = {}.hasOwnProperty,
@@ -117,8 +135,8 @@
         class_label = "label-compartit";
         borrar="";
         }
-
-      var anotacio_capa =  '<div class="annotator-marginviewer-text"><div class="'+annotation.category+' anotator_color_box"></div><div class="anotador_text">'+ annotation.text + '</div></div><div class="annotator-marginviewer-text">'+ $.format.date(annotation.data_creacio, "dd/MM/yyyy HH:mm:ss") + '</div><div class="annotator-marginviewer-quote">'+ annotation.quote + '</div><div class="annotator-marginviewer-footer"><span class="'+class_label+'">' + annotation.user + '</span>'+anotacio_compartida+borrar+'</div>';
+      var textAnnotation = this.removeTags('iframe',annotation.text);
+      var anotacio_capa =  '<div class="annotator-marginviewer-text"><div class="'+annotation.category+' anotator_color_box"></div><div class="anotador_text">'+ textAnnotation + '</div></div><div class="annotator-marginviewer-text">'+ $.format.date(annotation.data_creacio, "dd/MM/yyyy HH:mm:ss") + '</div><div class="annotator-marginviewer-quote">'+ annotation.quote + '</div><div class="annotator-marginviewer-footer"><span class="'+class_label+'">' + annotation.user + '</span>'+anotacio_compartida+borrar+'</div>';
       return anotacio_capa;
     };
 
@@ -158,10 +176,20 @@
             }, 2000);
           } 
       });
-      //Afegim informació de l'anotació en l'emelemnt data per poder esborarr-la
+      
       $('#'+anotation_reference).data('annotation', annotation);
       $(anotacioObject).fadeIn('fast');
     };
+
+      //Strip content tags
+    visorAnotacions.prototype.removeTags = function(striptags, html) { 
+      striptags = (((striptags || '') + '').toLowerCase().match(/<[a-z][a-z0-9]*>/g) || []).join(''); 
+      var tags = /<\/?([a-z][a-z0-9]*)\b[^>]*>/gi,commentsAndPhpTags = /<!--[\s\S]*?-->|<\?(?:php)?[\s\S]*?\?>/gi;
+      
+      return html.replace(commentsAndPhpTags, '').replace(tags, function($0, $1) {
+        return html.indexOf('<' + $1.toLowerCase() + '>') > -1 ? $0 : '';
+      });
+    };  
 
   
 

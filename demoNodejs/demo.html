@@ -451,7 +451,8 @@
                   </div> 
                    </div></div></div></div>
       
-      <script src="/annotator/js/jquery-1.9.1.js"></script><script src="/annotator/js/jquery.i18n.min.js"></script><script src="/annotator/js/showdown.js"></script><script src="/annotator/js/bootstrap-custom.min.js"></script><script src="/annotator/js/prettify.js"></script><script src="/annotator/js/jquery.masonry.min.js"></script><script src="/annotator/js/main.js"></script><script src="/annotator/js/annotator-full-1_9.js"></script><script src="/annotator/js/categories.js"></script><script src="/annotator/js/visor-anotacions.js"></script><script src="/annotator/js/jquery.dateFormat.js"></script><script src="/annotator/js/jquery.slimscroll.js"></script><script src="/annotator/js/annotator.touch.min.js"></script>
+      <script src="/annotator/js/jquery-1.9.1.js"></script><script src="/annotator/js/jquery.i18n.min.js"></script><script src="/annotator/js/showdown.js"></script><script src="/annotator/js/bootstrap-custom.min.js"></script><script src="/annotator/js/prettify.js"></script><script src="/annotator/js/jquery.masonry.min.js"></script><script src="/annotator/js/main.js"></script><script src="/annotator/js/annotator-full-1_9.js"></script><script src="/annotator/js/categories.js"></script><script src="/annotator/js/visor-anotacions.js"></script><script src="/annotator/js/jquery.dateFormat.js"></script><script src="/annotator/js/jquery.slimscroll.js"></script> <script src="/annotator/js/richEditor.js"></script>
+      <script src="/annotator/js/tinymce/tinymce.min.js"></script>
       <script>
       var socket = io.connect('http://localhost:3000');
       var propietary = '{$__propietary__$}';
@@ -476,6 +477,7 @@
                         showViewPermissionsCheckbox: true,
                         showEditPermissionsCheckbox: false
                     });
+                    $('body').annotator().annotator('addPlugin', 'RichEditor');
                        $('body').annotator().annotator('addPlugin', 'Categories',{
                            errata:'annotator-hl-errata',
                            destacat:'annotator-hl-destacat',
@@ -493,6 +495,7 @@
                         }
                     });
                    $('body').annotator().annotator('addPlugin', 'visorAnotacions');
+
                jQuery("body").annotator().annotator('addPlugin', 'Touch', {
                force: location.search.indexOf('force') > -1,
                useHighlighter: location.search.indexOf('highlighter') > -1
