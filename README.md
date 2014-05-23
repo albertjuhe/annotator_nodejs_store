@@ -27,8 +27,8 @@ You need install several in the nodejs folder package before start (npm install)
 - mysql
 - http
 - request
-- pdfkit
-- socket.io (http://socket.io/)
+- pdfkit (Export annotaions to PDF format)
+- socket.io (http://socket.io/) Who is reading the content. Chat rooms in the future.
 
 Copy the content of the github into the nodejs folder.
 Inside this folder there is a file called config.json, is the config file.
