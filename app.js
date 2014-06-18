@@ -78,52 +78,9 @@ var port  = config.port;
 server.listen(port);
 loggerConsole.debug("Loaded." + config.port);
 logger.debug("Loaded..." + config.port);
+app.set('server',server);
 
-
-/* socket.io express config  */
-io = require('socket.io').listen(server);
-
-io.sockets.on('connection', function(socket){
-
-  socket.on('login',function(username) {
-    socket.set('username',username,function(err) {
-      if (err) throw err;
-      console.log('SocketIO: Username '+ username +' connected...');  
-    });
-  });
-  socket.emit('login');
-  
-  
-  socket.on('disconnect', function () {
-    console.log('SocketIO: User Disconnected...');    
-    var rooms = io.sockets.manager.roomClients[socket.id]
-    for(var room in rooms) {
-        room = room.replace('/',''); //Important
-        if(room){
-                  
-          var counter_refresh = setTimeout(function(){
-            io.sockets.in(room).emit('notification', { online:io.sockets.clients(room).length});
-            clearTimeout(counter_refresh)
-          }, 2000);
-
-        }  
-     }
-  });
-
-  /* Each content is a room
-   *
-  */
-  socket.on('join',function(room) {
-      socket.set('room',room,function(err) {
-        if (err) { throw err; }
-        socket.join(room);
-        socket.get('username',function(err,username) {
-          console.log(username + 'esta al room ' + room)
-        });
-        var clients = io.sockets.clients(room); 
-        io.sockets.in(room).emit('notification', { online: clients.length });
-
-      });
-  });
-
-});
+//socket io
+var comunication = require('./lib/sockets/comunication');
+var cmq = new comunication();
+cmq.init(app);
