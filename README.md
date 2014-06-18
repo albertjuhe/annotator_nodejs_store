@@ -5,8 +5,8 @@ Annotator with Nodejs + express + socket.io + MySQL
 
 Is a sample and a simple aplication that uses the Annotateit (http://annotateit.org/) with nodejs and Mysql as a back store.
 There is a folder called demoNodejs, this folder contains a  demo and several plug-ins, a category plug-in, store plug-in, and a panel viewer plugin (https://github.com/okfn/annotator/wiki). 
-This aplication let you store, delete and update annotations, export anotations to PDF, display annotations in a right panel viewerand categorize this annotations.
-The annotations are displayed in the right panel with an icon for deleting, and a little eye, it means that the annotations is shared. I fyou are the owner of the annotations your username is displayed in a white background, if not it is displayed ina brown background.
+This aplication let you store, delete and update annotations, export anotations to PDF, display annotations in a right panel viewer, create annotations with Tinymc, and categorize this annotations.
+The annotations are displayed in the right panel with an icon for deleting, and a little eye, it means that the annotations is shared. I fyou are the owner of the annotations your username is displayed in a white background, if not it is displayed in a brown background.
 
 You can execute after the installation with: node node_aplicaction_folder/app.js
 You can try with this URL:
@@ -27,8 +27,8 @@ You need install several in the nodejs folder package before start (npm install)
 - mysql
 - http
 - request
-- pdfkit
-- socket.io (http://socket.io/)
+- pdfkit (Export annotaions to PDF format)
+- socket.io (http://socket.io/) Who is reading the content. Chat rooms in the future.
 
 Copy the content of the github into the nodejs folder.
 Inside this folder there is a file called config.json, is the config file.
@@ -73,7 +73,7 @@ After the excution you can find a log files in the log folder.
 
 ##Development
 
-Atention:The core of thh annotator has been modified.
+Atention:The core of the annotator has been modified for the categories.js plugin.
 
 - All the routing in the nodejs application are in the lib\rest\buffer.js
 - update annotation: app.put('/annotation/update/:username/:code/:id', function(req, res)
@@ -86,6 +86,12 @@ Atention:The core of thh annotator has been modified.
 When a user is displaying a document for example:
 http://localhost:3000/annotation/testuser2/demo.html nodejs are executing (get), search in the anotacions table, all the annotations belonging to testuser2 with code equal to demo.
 
+##Plugins
+
+There are a several Annotator plugins:
+- Panel Viewer Plugin (demoNodejs/js/visoanotacions.js)
+- Categorization plugin (demoNodejs/js/categories.js)
+- RichEditor Plugin (demoNodejs/js/richEditor.js) Use tinymc 4.0
 
 ##Database
 
@@ -124,6 +130,7 @@ Inside the file demoNodejs/demo.html you can find the store plug-in configuratio
                            destacat:'annotator-hl-destacat',
                            subratllat:'annotator-hl-subratllat' }
                      );
+                   $('body').annotator().annotator('addPlugin', 'RichEditor');
                    $('body').annotator().annotator('addPlugin', 'Markdown');
                    $('body').annotator('addPlugin', 'Store', {
                         prefix: 'http://localhost:3000/annotation',
