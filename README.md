@@ -8,6 +8,8 @@ There is a folder called demoNodejs, this folder contains a  demo and several pl
 This aplication let you store, delete and update annotations, export anotations to PDF, display annotations in a right panel viewer, create annotations with Tinymc, and categorize this annotations.
 The annotations are displayed in the right panel with an icon for deleting, and a little eye, it means that the annotations is shared. I fyou are the owner of the annotations your username is displayed in a white background, if not it is displayed in a brown background.
 
+##Demo
+
 You can execute after the installation with: node node_aplicaction_folder/app.js
 You can try with this URL:
 http://localhost:3000/annotation/testuser1/demo.html
@@ -27,7 +29,7 @@ You need install several in the nodejs folder package before start (npm install)
 - mysql
 - http
 - request
-- pdfkit (Export annotaions to PDF format)
+- wkhtmltopdf (Export annotaions to PDF format) (https://www.npmjs.org/package/wkhtmltopdf)
 - socket.io (http://socket.io/) Who is reading the content. Chat rooms in the future.
 
 Copy the content of the github into the nodejs folder.
