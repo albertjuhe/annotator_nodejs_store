@@ -25,7 +25,8 @@ var express = require('express'),
   , server = http.createServer(app);
 var config = require('./config.json');
 
-__dirname = 'C:\\wamp_server\\www\\demoNodejs\\';
+//__dirname = 'C:\\wamp_server\\www\\demoNodejs\\';
+__dirname = 'C:\\nodejs\\plug_in_nodejs\\demoNodejs\\';
 
 //Language configuration
 i18n.configure({
