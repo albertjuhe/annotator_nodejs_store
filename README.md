@@ -56,7 +56,7 @@ port: port where we can find the aplication
 
 You have to copy the folder: demoNodejs into your http server (ex:C:\wamp_server\www\demoNodejs).
 
-For the PDF export anotations, you have to copy the folder fonts and img in the root folder of nodejs.
+For the PDF export anotations, firts install wkhtmltopdf and configure it, follow the web site instructions.
 After this you have to update the app.js file, you have to change the line:
 
 ```nodejs
@@ -86,7 +86,7 @@ Atention:The core of the annotator has been modified for the categories.js plugi
 - get annotations in pdf format: app.get('/annotation/:username/:code.pdf', function(req, res)
 
 When a user is displaying a document for example:
-http://localhost:3000/annotation/testuser2/demo.html nodejs are executing (get), search in the anotacions table, all the annotations belonging to testuser2 with code equal to demo.
+http://localhost:3000/annotation/testuser2/demo.html nodejs are executing (get), the aplication search in the anotations table, all the annotations belonging to testuser2 with code equal to demo.
 
 ##Plugins
 
