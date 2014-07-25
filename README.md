@@ -13,8 +13,9 @@ The annotations are displayed in the right panel with an icon for deleting, and 
 [Demo Frankenstein](http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/mary/demo.html)
 
 Its a completely opened demo, you can use all the users that you want without security, its a demo.
-If you want to change the user, you only have to change:
-http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/[user]/demo.html
+If you want to change the user, you only have to change the user in the URL:
+http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/user/demo.html
+
 I've created a [mary](http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/mary/demo.html) and [testuser] (http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/testuser/demo.html).
 
 ##Demo
