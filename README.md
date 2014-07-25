@@ -8,6 +8,15 @@ There is a folder called demoNodejs, this folder contains a  demo and several pl
 This aplication let you store, delete and update annotations, export anotations to PDF, display annotations in a right panel viewer, create annotations with Tinymc, and categorize this annotations.
 The annotations are displayed in the right panel with an icon for deleting, and a little eye, it means that the annotations is shared. I fyou are the owner of the annotations your username is displayed in a white background, if not it is displayed in a brown background.
 
+##Complete Demo
+
+[Demo Frankenstein](http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/mary/demo.html)
+
+Its a completely opened demo, you can use all the users that you want without security, its a demo.
+If you want to change the user, you only have to change:
+http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/[user]/demo.html
+I've created a [mary](http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/mary/demo.html) and [testuser] (http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/testuser/demo.html).
+
 ##Demo
 
 You can execute after the installation with: node node_aplicaction_folder/app.js
