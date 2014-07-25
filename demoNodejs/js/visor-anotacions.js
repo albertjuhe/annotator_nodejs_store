@@ -51,6 +51,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
       this.onDeleteClick = __bind(this.onDeleteClick, this);
       this.onDeleteMouseover = __bind(this.onDeleteMouseover, this);
       this.onDeleteMouseout = __bind(this.onDeleteMouseout, this);
+      this.onFilter = __bind(this.onFilter, this);
       visorAnotacions.__super__.constructor.apply(this, arguments);
 
       $( "body" ).append( this.createAnnotationPanel() );
@@ -68,7 +69,28 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
       if (!Annotator.supported()) {
         return;
       }
+      $('#type_share').click(this.onFilter);
+      $('#type_own').click(this.onFilter);
      
+    };
+
+     visorAnotacions.prototype.onFilter = function(event) {
+      var anotacions_actives = $(".container-anotacions").find('.annotator-marginviewer-element');
+      $(anotacions_actives).hide();  
+
+      var class_view = "";
+     
+      var checkbox_selected = $('li.filter-panel').find('input:checked'); 
+      if (checkbox_selected.length > 0) {
+          $('li.filter-panel').find('input:checked').each(function () {
+            class_view += $(this).attr('rel') + '.';
+          });     
+          $('.container-anotacions > li.' + class_view.substring(0,class_view.length-1)).show();
+      } else {
+        $(anotacions_actives).show();   
+      }
+      
+
     };
 
     visorAnotacions.prototype.onDeleteClick = function(event) {
@@ -141,13 +163,23 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
     };
 
     visorAnotacions.prototype.createAnnotationPanel = function(annotation) {     
-      var anotacio_capa =  '<div  class="annotations-list-uoc" style="background-color:#ddd;"><div id="annotations-panel"><span class="rotate" style="cursor:pointer;padding:5px;background-color:#ddd;position: absolute; top:10em;left: -50px; width: 155px; height: 110px;">'+ i18n_dict.view_annotations +'<span class="label-counter-alert" style="padding:0.2em 0.3em;float:right" id="count-anotations-alert" title="online students in your classroom">0</span>&nbsp;<span class="label-counter" style="padding:0.2em 0.3em;float:right" id="count-anotations" title="Anotacions totals">0</span></span></div><div id="anotacions-uoc-panel" style="height:80%"><ul class="container-anotacions"><li><a href="'+code+'.pdf" target="_blank"><img src="/annotator/img/PDF.png" style="margin-bottom:10px" title="'+i18n_dict.Download_pdf+'"/></a></li></ul></div></div>';
+      /*
+      var anotacio_capa =  '<div  class="annotations-list-uoc" style="background-color:#ddd;"><div id="annotations-panel"><span class="rotate" style="cursor:pointer;padding:5px;background-color:#ddd;position: absolute; top:10em;left: -50px; width: 155px; height: 110px;">'+ i18n_dict.view_annotations +'<span class="label-counter-alert" style="padding:0.2em 0.3em;float:right" id="count-anotations-alert" title="online students in your classroom">0</span>&nbsp;<span class="label-counter" style="padding:0.2em 0.3em;float:right" id="count-anotations" title="Anotacions totals">0</span></span></div><div id="anotacions-uoc-panel" style="height:80%"><ul class="container-anotacions"><li><a href="'+code+'.pdf" target="_blank"><img src="/annotator/img/PDF.png" style="margin-bottom:10px" title="'+i18n_dict.Download_pdf+'"/></a>'+checboxes+'</li></ul></div></div>';
+      return anotacio_capa;
+*/
+      var checboxes = '<label class="checkbox-inline"><input type="checkbox" id="type_own" rel="me"/>'+ i18n_dict.own +'</label><label class="checkbox-inline">  <input type="checkbox" id="type_share" rel="shared"/>'+i18n_dict.share+'</label>';
+      var errataTab = '';
+      //var anotacio_capa =  '<div  class="annotations-list-uoc" style="background-color:#ddd;"><div id="annotations-panel">'+errataTab+'<span class="rotate" style="cursor:pointer;padding:5px;background-color:#ddd;position: absolute; top:10em;left: -50px; width: 155px; height: 110px;">'+ i18n_dict.view_annotations +'<span class="label-counter-alert" style="padding:0.2em 0.3em;float:right" id="count-anotations-alert" title="online students in your classroom">0</span>&nbsp;<span class="label-counter" style="padding:0.2em 0.3em;float:right" id="count-anotations" title="Anotacions totals">0</span></span></div><div id="anotacions-uoc-panel" style="height:80%"><ul class="container-anotacions"><li class="filter-panel"><a href="modul_'+modul+'.pdf" target="_blank"><img src="/daisy/Materials/img/PDF.png" style="margin-bottom:10px" title="'+i18n_dict.Download_pdf+'"/></a>'+checboxes+'</li></ul></div></div>';
+      var anotacio_capa =  '<div  class="annotations-list-uoc" style="background-color:#ddd;"><div id="annotations-panel"><span class="rotate" style="cursor:pointer;padding:5px;background-color:#ddd;position: absolute; top:10em;left: -50px; width: 155px; height: 110px;">'+ i18n_dict.view_annotations +'<span class="label-counter-alert" style="padding:0.2em 0.3em;float:right" id="count-anotations-alert" title="online students in your classroom">0</span>&nbsp;<span class="label-counter" style="padding:0.2em 0.3em;float:right" id="count-anotations" title="Anotacions totals">0</span></span></div><div id="anotacions-uoc-panel" style="height:80%"><ul class="container-anotacions"><li class="filter-panel"><a href="'+code+'.pdf" target="_blank"><img src="/annotator/img/PDF.png" style="margin-bottom:10px" title="'+i18n_dict.Download_pdf+'"/></a>'+checboxes+'</li></ul></div></div>';
+      
       return anotacio_capa;
     };
 
    
     visorAnotacions.prototype.createReferenceAnnotation = function(annotation) {     
      var anotation_reference = null;
+      var data_owner = "me";
+     var data_type = "";
 
       if (annotation.id != null) {
         anotation_reference = "annotation-"+annotation.id;
@@ -155,7 +187,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
         anotation_reference = "annotator-temp";
       }
 
-      var anotacio_capa =  '<li class="annotator-marginviewer-element" data-type="'+annotation.category+'" id="'+anotation_reference +'">'+this.mascaraAnnotation(annotation)+'</li>';
+      if (annotation.estat==1 || annotation.permissions.read.length===0 ) data_type = "shared";
+      if (annotation.propietary==0) data_owner = "";
+
+      var anotacio_capa =  '<li class="annotator-marginviewer-element '+data_type+' '+data_owner+'" data-type="'+annotation.category+'" id="'+anotation_reference +'">'+this.mascaraAnnotation(annotation)+'</li>';
       var malert = i18n_dict.anotacio_lost
 
       anotacioObject = $(anotacio_capa).appendTo('.container-anotacions').click(function(event) {
@@ -175,6 +210,25 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
               scrollTop: $("#"+referencia_anotacio).offset().top - (viewportHeight/2)
             }, 2000);
           } 
+      })
+       .mouseover(function() {   
+        $element= jQuery("span[id="+annotation.id+"]");       
+        var fontSize = $element.css('font-size').split('px')[0];
+        var fontInt = parseInt(fontSize) + 1;
+        if ($element.length) {            
+          $element.css({"border-color": "#000000", 
+             "border-width":"1px", 
+             "border-style":"solid",
+             "font-size":""+fontInt + "px"});
+        }
+      })
+      .mouseout(function() {    
+          $element= jQuery("span[id="+annotation.id+"]");    
+          var fontSize = $element.css('font-size').split('px')[0];
+          var fontInt = parseInt(fontSize) - 1;
+          if ($element.length) {            
+            $element.css({"border-width":"0px","font-size":""+fontInt + "px"});
+          }
       });
       
       $('#'+anotation_reference).data('annotation', annotation);

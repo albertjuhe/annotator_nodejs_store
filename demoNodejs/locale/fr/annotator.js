@@ -1,0 +1,22 @@
+var i18n_dict = {
+                "Comments"                 : "Commentaires",
+                "requires_jQuery"          : "JQuery est requis",
+                "requires_JSON"            : "JSON est requis",
+                "Cancel"                   : "Abandonner",
+                "Save"                     : "Sauvegarder",
+                "view_annotation"          : "Permet à tout le monde de <strong>voir</strong> l'annotation",
+                "edit_annotation"          : "Permet à tout le monde d'<strong>éditer</strong> l'annotation",
+                "No Comment"               : "Sans commentaire",
+                "Summary"                  : "Résumé",
+                "view_annotations"         : "Voir l'annotation",
+                "doesnot_suport"           : "Le navigateur ne supporte pas les annotations",
+                "Edit"                     : "Editer",
+                "Delete"                   : "Effacer",
+                "error"                    : "Erreur",
+                "destacat"                 : "Remarqué",
+                "subratllat"               : "Souligné",     
+                "Download_pdf"             : "Download in PDF format",
+                "share"                    : "Partager",
+                "anotacio_lost"            : "No se puede ubicar la annotation",
+                "own"                      : "My annotations"                                                                                                                      
+        };
