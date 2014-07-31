@@ -139,11 +139,11 @@
   };
 
   if (!(typeof jQuery !== "undefined" && jQuery !== null ? (_ref = jQuery.fn) != null ? _ref.jquery : void 0 : void 0)) {
-    console.error($.i18n._("requires_jQuery"));
+    console.error(_t("Annotator requires jQuery: have you included lib/vendor/jquery.js?"));
   }
 
   if (!(JSON && JSON.parse && JSON.stringify)) {
-    console.error($.i18n._(("requires_JSON")));
+    console.error(_t("Annotator requires a JSON implementation: have you included lib/vendor/json2.js?"));
   }
 
   $ = jQuery;
@@ -831,18 +831,12 @@
 
   Annotator = (function(_super) {
     __extends(Annotator, _super);
-//UOC - New events
+
     Annotator.prototype.events = {
       ".annotator-adder button click": "onAdderClick",
       ".annotator-adder button mousedown": "onAdderMousedown",
       ".annotator-hl mouseover": "onHighlightMouseover",
-      ".annotator-hl mouseout": "startViewerHideTimer",
-      ".annotator-hl-errata mouseover": "onHighlightMouseover",
-      ".annotator-hl-errata mouseout": "startViewerHideTimer",
-      ".annotator-hl-destacat mouseover": "onHighlightMouseover",
-      ".annotator-hl-destacat mouseout": "startViewerHideTimer",
-      ".annotator-hl-subratllat mouseover": "onHighlightMouseover",
-      ".annotator-hl-subratllat mouseout": "startViewerHideTimer"
+      ".annotator-hl mouseout": "startViewerHideTimer"
     };
 
     Annotator.prototype.html = {
@@ -911,11 +905,10 @@
       this.viewer.hide().on("edit", this.onEditAnnotation).on("delete", this.onDeleteAnnotation).addField({
         load: (function(_this) {
           return function(field, annotation) {
-            
             if (annotation.text) {
               $(field).html(Util.escape(annotation.text));
             } else {
-              $(field).html("<i>" + ($.i18n._('No Comment')) + "</i>");
+              $(field).html("<i>" + (_t('No Comment')) + "</i>");
             }
             return _this.publish('annotationViewerTextField', [field, annotation]);
           };
@@ -931,7 +924,7 @@
       this.editor = new Annotator.Editor();
       this.editor.hide().on('hide', this.onEditorHide).on('save', this.onEditorSubmit).addField({
         type: 'textarea',
-        label: i18n_dict.Comments + '\u2026',
+        label: _t('Comments') + '\u2026',
         load: function(field, annotation) {
           return $(field).find('textarea').val(annotation.text || '');
         },
@@ -1043,7 +1036,6 @@
       return annotation;
     };
 
-//UOC - Method modified
     Annotator.prototype.setupAnnotation = function(annotation) {
       var e, normed, normedRanges, r, root, _k, _l, _len2, _len3, _ref1;
       root = this.wrapper[0];
@@ -1056,7 +1048,6 @@
           normedRanges.push(Range.sniff(r).normalize(root));
         } catch (_error) {
           e = _error;
-          normed = annotation.quote;
           if (e instanceof Range.RangeError) {
             this.publish('rangeNormalizeFail', [annotation, r, e]);
           } else {
@@ -1064,18 +1055,15 @@
           }
         }
       }
-      //annotation.order = document.evaluate(annotation.ranges[0].start, document, null, XPathResult.ANY_TYPE, null);''; ////UOC - order atribute      
-      annotation.quote = [];      
+      annotation.quote = [];
       annotation.ranges = [];
       annotation.highlights = [];
-      if (normedRanges.length>0) {
-        for (_l = 0, _len3 = normedRanges.length; _l < _len3; _l++) {
-          normed = normedRanges[_l];
-          annotation.quote.push($.trim(normed.text()));
-          annotation.ranges.push(normed.serialize(this.wrapper[0], '.annotator-hl-'+annotation.category));
-          $.merge(annotation.highlights, this.highlightRange(normed,annotation.category,annotation.id));
-        } 
-      } else annotation.quote.push($.trim(normed));
+      for (_l = 0, _len3 = normedRanges.length; _l < _len3; _l++) {
+        normed = normedRanges[_l];
+        annotation.quote.push($.trim(normed.text()));
+        annotation.ranges.push(normed.serialize(this.wrapper[0], '.annotator-hl'));
+        $.merge(annotation.highlights, this.highlightRange(normed));
+      }
       annotation.quote = annotation.quote.join(' / ');
       $(annotation.highlights).data('annotation', annotation);
       return annotation;
@@ -1142,16 +1130,14 @@
         return false;
       }
     };
-//UOC - Method modified - I need ID
-    Annotator.prototype.highlightRange = function(normedRange, cssClass, id) {
+
+    Annotator.prototype.highlightRange = function(normedRange, cssClass) {
       var hl, node, white, _k, _len2, _ref1, _results;
-       if (cssClass == null) {
+      if (cssClass == null) {
         cssClass = 'annotator-hl';
-      } else {
-        cssClass = 'annotator-hl-' + cssClass;
       }
       white = /^\s*$/;
-      hl = $("<span class='" + cssClass + "' id='"+id+"'></span>");
+      hl = $("<span class='" + cssClass + "'></span>");
       _ref1 = normedRange.textNodes();
       _results = [];
       for (_k = 0, _len2 = _ref1.length; _k < _len2; _k++) {
@@ -1162,13 +1148,11 @@
       }
       return _results;
     };
-//UOC - Method modified - I need ID
-    Annotator.prototype.highlightRanges = function(normedRanges, cssClass, id) {
+
+    Annotator.prototype.highlightRanges = function(normedRanges, cssClass) {
       var highlights, r, _k, _len2;
       if (cssClass == null) {
         cssClass = 'annotator-hl';
-      } else {
-        cssClass = 'annotator-hl-' + cssClass;
       }
       highlights = [];
       for (_k = 0, _len2 = normedRanges.length; _k < _len2; _k++) {
@@ -1284,7 +1268,7 @@
       }
       return this.ignoreMouseup = true;
     };
-//UOC - Method modified , id in the annotation
+
     Annotator.prototype.onAdderClick = function(event) {
       var annotation, cancel, cleanup, position, save;
       if (event != null) {
@@ -1297,13 +1281,7 @@
       save = (function(_this) {
         return function() {
           cleanup();
-          annotation.order = $('.annotator-hl-temporary').parent().attr('id');
-          $(annotation.highlights).removeClass('annotator-hl-temporary');      
-          if (annotation.category!='') {
-            $(annotation.highlights).removeClass('annotator-hl');
-            $(annotation.highlights).addClass('annotator-hl-'+annotation.category);          
-            $(annotation.highlights).attr('id', 'id-annotator-temp' );         
-          }
+          $(annotation.highlights).removeClass('annotator-hl-temporary');
           return _this.publish('annotationCreated', [annotation]);
         };
       })(this);
@@ -1529,7 +1507,7 @@
       focus: 'annotator-focus'
     };
 
-    Editor.prototype.html = "<div class=\"annotator-outer annotator-editor\">\n  <form class=\"annotator-widget\">\n    <ul class=\"annotator-listing\"></ul>\n    <div class=\"annotator-controls\">\n      <a href=\"#cancel\" class=\"annotator-cancel\">" + i18n_dict.Cancel + "</a>\n<a href=\"#save\" class=\"annotator-save annotator-focus\">" + i18n_dict.Save + "</a>\n    </div>\n  </form>\n</div>";
+    Editor.prototype.html = "<div class=\"annotator-outer annotator-editor\">\n  <form class=\"annotator-widget\">\n    <ul class=\"annotator-listing\"></ul>\n    <div class=\"annotator-controls\">\n      <a href=\"#cancel\" class=\"annotator-cancel\">" + _t('Cancel') + "</a>\n<a href=\"#save\" class=\"annotator-save annotator-focus\">" + _t('Save') + "</a>\n    </div>\n  </form>\n</div>";
 
     Editor.prototype.options = {};
 
@@ -1560,7 +1538,7 @@
       this.element.addClass(this.classes.hide);
       return this.publish('hide');
     };
-//UOC - Method modified , categories
+
     Editor.prototype.load = function(annotation) {
       var field, _k, _len2, _ref2;
       this.annotation = annotation;
@@ -1568,16 +1546,6 @@
       _ref2 = this.fields;
       for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
         field = _ref2[_k];
-        //Actualització de la categoria
-        if (field.type=="radio" && annotation.category!=null) {
-          if (field.value==annotation.category) {
-            field.element.childNodes[0].checked = true;
-            //field.checked = true;
-          } else {
-            field.element.childNodes[0].checked = false;
-            //field.checked = false;
-          }
-        }
         field.load(field.element, this.annotation);
       }
       return this.show();
@@ -1594,7 +1562,7 @@
       this.publish('save', [this.annotation]);
       return this.hide();
     };
-//UOC - Method modified , categories
+
     Editor.prototype.addField = function(options) {
       var element, field, input;
       field = $.extend({
@@ -1615,34 +1583,14 @@
         case 'checkbox':
           input = $('<input />');
           break;
-        case 'radio': //Categories
-          input = $('<input type="radio" style="margin-left:5px"/>');
-          break;
         case 'select':
-          input = $('<select />'); 
-          break;
-        case 'colorCategories':    
-          //input = $('<div class="categories"/>');            
-          break;
+          input = $('<select />');
       }
-      //Tractament especial pels colors
-      if (field.type==='colorCategories') {
-         _ref = field.label;
-         input = "<div style='margin:5px;padding:5px;'>";
-         for (cat in _ref) {
-            color = _ref[cat];
-            input = input + "<div><div class='"+color+" caixa_color'></div>" + color + "</div>";
-            
-          }
-          input = input + " </div> ";
-          element.append( input );
-      } else {
-        element.append(input);
-        input.attr({
-          id: field.id,
-          placeholder: field.label
-        });
-      }
+      element.append(input);
+      input.attr({
+        id: field.id,
+        placeholder: field.label
+      });
       if (field.type === 'checkbox') {
         input[0].type = 'checkbox';
         element.addClass('annotator-checkbox');
@@ -1650,29 +1598,7 @@
           "for": field.id,
           html: field.label
         }));
-        //UOC - Afegim la possibilitat de posar una icona.
-        if (field.icon) {
-          element.append('<img src="/img/'+field.icon+'" style="margin-left:4px;" title="'+i18n_dict.share+'" alt="'+i18n_dict.share+'"/>');
-        }
       }
-      //Radio button
-      if (field.type === 'radio') {
-        input[0].type = 'radio';
-        input[0].name = 'categories-annotation';
-        input[0].value = field.label;
-        input[0].id = field.label;
-        element.addClass('annotator-radio');
-        element.append($('<label />', {
-          "for": field.id,
-          "style": "vertical-align: middle;text-transform:capitalize;",
-          html: "<div class='"+field.label+"' style='display:inline-block;height:15px;width:30px;margin-top:3px;margin-bottom:3px;margin-rigth:5px;vertical-align:middle'></div> "+ $.i18n._(field.label),
-        }));
-      }
-       //Activem elemet que pertoca
-      if (field.checked) {
-        input[0].checked = true;
-      }
-
       this.element.find('ul:first').append(element);
       this.fields.push(field);
       return field.element;
@@ -1799,7 +1725,7 @@
 
     Viewer.prototype.html = {
       element: "<div class=\"annotator-outer annotator-viewer\">\n  <ul class=\"annotator-widget annotator-listing\"></ul>\n</div>",
-      item: "<li class=\"annotator-annotation annotator-item\">\n  <span class=\"annotator-controls\">\n    <a href=\"#\" title=\"View as webpage\" class=\"annotator-link\">View as webpage</a>\n    <button title=\""+i18n_dict.Edit+"\" class=\"annotator-edit\">"+i18n_dict.Edit+"</button>\n    <button title=\""+i18n_dict.Delete+"\" class=\"annotator-delete\">"+i18n_dict.Delete+"</button>\n  </span>\n</li>"
+      item: "<li class=\"annotator-annotation annotator-item\">\n  <span class=\"annotator-controls\">\n    <a href=\"#\" title=\"View as webpage\" class=\"annotator-link\">View as webpage</a>\n    <button title=\"Edit\" class=\"annotator-edit\">Edit</button>\n    <button title=\"Delete\" class=\"annotator-delete\">Delete</button>\n  </span>\n</li>"
     };
 
     Viewer.prototype.options = {
@@ -2031,7 +1957,7 @@
     }
 
     Unsupported.prototype.options = {
-      message: Annotator._t($.i18n._('doesnot_suport'))
+      message: Annotator._t("Sorry your current browser does not support the Annotator")
     };
 
     Unsupported.prototype.pluginInit = function() {
@@ -2324,12 +2250,7 @@
           return function(data) {
             if (data.id == null) {
               console.warn(Annotator._t("Warning: No ID returned from server for annotation "), annotation);
-           } else {
-            annotation.id = data.id;
-            $("#id-annotator-temp").attr('id', annotation.id );
-            $("#annotator-temp").attr('id', 'annotation-'+annotation.id );
-            $("#annotation-"+annotation.id).children(".annotator-marginviewer-quote").show();
-          }
+            }
             return _this.updateAnnotation(annotation, data);
           };
         })(this));
@@ -2614,16 +2535,15 @@
       if (this.options.showViewPermissionsCheckbox === true) {
         this.annotator.editor.addField({
           type: 'checkbox',
-          label: Annotator._t($.i18n._('view_annotation')),
+          label: Annotator._t('Allow anyone to <strong>view</strong> this annotation'),
           load: createCallback('updatePermissionsField', 'read'),
-          icon: 'Compartido.png',
           submit: createCallback('updateAnnotationPermissions', 'read')
         });
       }
       if (this.options.showEditPermissionsCheckbox === true) {
         this.annotator.editor.addField({
           type: 'checkbox',
-          label: Annotator._t($.i18n._('edit_annotation')),
+          label: Annotator._t('Allow anyone to <strong>edit</strong> this annotation'),
           load: createCallback('updatePermissionsField', 'update'),
           submit: createCallback('updateAnnotationPermissions', 'update')
         });

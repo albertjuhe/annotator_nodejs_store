@@ -1,4 +1,3 @@
-
 (function() {
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = {}.hasOwnProperty,
@@ -7,9 +6,9 @@
   Annotator.Plugin.Categories = (function(_super) {
     __extends(Categories, _super);
 
+    
     Categories.prototype.events = {
-      'annotationCreated': 'setHighlights',
-      'annotationUpdated': 'onAnnotationUpdated',
+      'annotationsLoaded': 'onAnnotationsLoaded'
     };
 
     Categories.prototype.field = null;
@@ -22,68 +21,127 @@
 
     function Categories(element, categories) {
       this.setAnnotationCat = __bind(this.setAnnotationCat, this);
-      this.setHighlights = __bind(this.setHighlights, this);
-      this.onAnnotationUpdated = __bind(this.onAnnotationUpdated, this);
       this.updateField = __bind(this.updateField, this);
+      this.onAnnotationUpdated = __bind(this.onAnnotationUpdated, this);
+      this.annotationCreated = __bind(this.annotationCreated, this);      
+      this.AnnotationSection = __bind(this.AnnotationSection, this);
+      this.AnnotationCategory = __bind(this.AnnotationCategory, this);
+
       this.options.categories = categories;
       Categories.__super__.constructor.apply(this, arguments);
     }
 
 
-    Categories.prototype.pluginInit = function() {
-      var cat, color, i, isChecked, _ref;
+    Categories.prototype.pluginInit = function() {      
       if (!Annotator.supported()) {
         return;
       }
-      i = 0;
-      _ref = this.options.categories;
-      for (cat in _ref) {
-        color = _ref[cat];
-        if (i === 0) {
-          isChecked = true;
-        } else {
-          isChecked = false;
+
+      //Call editor after submit.
+      this.annotator.subscribe("annotationEditorSubmit",this.AnnotationSection);      
+
+      //Call editor before show and write color checker
+      this.annotator.subscribe("annotationEditorShown",this.AnnotationCategory);     
+
+      //Annotation creation
+      this.annotator.subscribe("annotationCreated",this.annotationCreated);    
+
+      //Showing annotations
+      this.annotator.subscribe("annotationViewerShown",this.AnnotationViewer);   
+
+    };
+
+    //After loading annotations we want to change the annotation color and add the annotation id
+    Categories.prototype.onAnnotationsLoaded = function(annotations) {
+      var annotation;
+      var _categories = this.options.categories; //Categories plug-in
+
+      $('#count-anotations').text( annotations.length );
+      if (annotations.length > 0) {
+        for(i=0, len = annotations.length; i < len; i++) {
+          annotation = annotations[i];        
+          category = _categories[annotation.category];
+          $(annotation.highlights).addClass(category);  
+          $(annotation.highlights).attr('id', annotation.id ); 
         }
-        i = i + 1;
-        this.field = this.annotator.editor.addField({
-          type: 'radio',
-          label: cat,
-          value: cat,
-          hl: color,
-          checked: isChecked,
-          load: this.updateField,
-          submit: this.setAnnotationCat
-        });
+        
       }
-      this.viewer = this.annotator.viewer.addField({
-        load: this.updateViewer
-      });
-      if (this.annotator.plugins.Filter) {
-        this.annotator.plugins.Filter.addFilter({
-          label: 'Categories',
-          property: 'category',
-          isFiltered: Annotator.Plugin.Categories.filterCallback
-        });
-      }
-      return this.input = $(this.field).find(':input');
+      
     };
 
-    Categories.prototype.setViewer = function(viewer, annotations) {
-      var v;
-      return v = viewer;
-    };
+     //After loading annotations we want to change the annotation color and add the annotation id
+    Categories.prototype.AnnotationViewer = function(viewer, annotations) {
+      var annotation;
+      var isShared = ""; 
+      
+      if (annotations.length > 0) {
+        for(i=0, len = annotations.length; i < len; i++) {
+          annotation = annotations[i]; 
+          
+          if (annotation.estat==1 || annotation.permissions.read.length===0 ) {
+            isShared = "<img src=\"/annotator/img/Compartido.png\" title=\""+ i18n_dict.share +"\" style=\"margin-left:5px\"/>"
+          }
+          $('ul.annotator-widget > li.annotator-item').prepend('<div class="'+annotation.category+'" style="border: 1px solid #b3b3b3;height:6px;margin:4px;padding:4px;"></div>');
+          $( "div.annotator-user" ).html( "<span class='label'>"+annotation.user+"</span>"+isShared);
+          
+        }
+      }
+    }
 
+
+    //Section order and section title
+    Categories.prototype.AnnotationSection = function(editor,annotation) {
+      //Assign a categoy to the annotation
+
+      //Put the annotation section an annotation title
+      var ref = $('.annotator-hl-temporary').closest('div[data-section]');
+      if (ref) {
+        annotation.section = ref.data('section');
+        annotation.section_title = ref.data('title');
+      } else {
+        console.log("Section not detected!!!")
+      }
+      annotation.order = $('.annotator-hl-temporary').closest('div[id]').attr('id');       
+      annotation.category = $('input:radio[name=categories-annotation]:checked').val();
+
+    }
+
+     //Create the categories section inside the editor
+    Categories.prototype.AnnotationCategory = function(editor,annotation) {
+      var _categories = this.options.categories; //Categories plug-in
+      var editor = $('form.annotator-widget > ul.annotator-listing'); //Place to add categories.
+      if ($('li.annotator-radio').length == 0) { //If the category section not exists
+        editor.append("<li class='annotator-item annotator-radio'></li>");
+        var _radioGroup = $('li.annotator-radio'); //Place to add radiobuttons
+        var checked = "checked = 'checked'";
+        i=1;
+        for (cat in _categories) {
+          if (i>1) checked="";
+          var radio ="<input id='"+ cat+"' type='radio' "+checked+" placeholder='"+ cat+"' name='categories-annotation' value='"+ cat +"' style='margin-left:5px'/>";
+          radio = radio + '<label for="annotator-field-'+i+'" style="vertical-align: middle;text-transform:capitalize;"><div class="'+_categories[cat]+' square" style="display:inline-block;height:15px;width:30px;margin-top:3px;margin-bottom:3px;margin-rigth:5px;vertical-align:middle"></div><span style="margin-left:5px">'+$.i18n._(cat)+'</span></label><br/>';
+          i = i + 1;
+          _radioGroup.append(radio);
+        } 
+
+      }   
+      if (annotation.category) {
+        $('#' + annotation.category).prop('checked',true);
+      }
+    }
+
+    //When an annotation is changed we have to change the attributes
     Categories.prototype.onAnnotationUpdated = function(annotation) {
-    
      $( "span[id="+annotation.id+"]" ).attr('class','annotator-hl-'+annotation.category);
-      console.log('modificar anotacio');
     };
 
-    Categories.prototype.setHighlights = function(annotation) {
+    
+    Categories.prototype.annotationCreated = function(annotation) {
       var cat, h, highlights, _i, _len, _results;
+      
+      $( "span[id="+annotation.id+"]" ).attr('id',annotation.id);
       cat = annotation.category;
       highlights = annotation.highlights;
-      if (cat) {
+      if (cat) { //If have a category
         _results = [];
         for (_i = 0, _len = highlights.length; _i < _len; _i++) {
           h = highlights[_i];
@@ -103,15 +161,10 @@
       return this.input.val(category);
     };
 
-    Categories.prototype.setAnnotationCat = function(field, annotation) {
-      if (field.childNodes[0].checked) {
-        return annotation.category = field.childNodes[0].id;
-      }
-    };
-
     Categories.prototype.updateViewer = function(field, annotation) {
       field = $(field);
       field.html('<span class="annotator-hl-' + annotation.category + '">' +$.i18n._(annotation.category).toUpperCase() + '</span>').addClass('annotator-hl-'+ annotation.category );
+     
     };
 
     return Categories;
