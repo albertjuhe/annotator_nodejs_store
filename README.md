@@ -6,7 +6,9 @@ Annotator with Nodejs + express + socket.io + MySQL
 Is a sample and a simple aplication that uses the Annotateit (http://annotateit.org/) with nodejs and Mysql as a back store.
 There is a folder called demoNodejs, this folder contains a  demo and several plug-ins, a category plug-in, store plug-in, and a panel viewer plugin (https://github.com/okfn/annotator/wiki). 
 This aplication let you store, delete and update annotations, export anotations to PDF, display annotations in a right panel viewer, create annotations with Tinymc, and categorize this annotations.
-The annotations are displayed in the right panel with an icon for deleting, and a little eye, it means that the annotations is shared. I fyou are the owner of the annotations your username is displayed in a white background, if not it is displayed in a brown background.
+The annotations are displayed in the right panel with an icon for deleting, and a little eye, it means that the annotations is shared. If you are the owner of the annotations your username is displayed in a white background, if not it is displayed in a brown background.
+
+This Application uses [annotator 1.2.9] (https://github.com/openannotation/annotator/releases/tag/v1.2.9)
 
 ##Complete Demo
 
@@ -58,11 +60,11 @@ Inside this folder there is a file called config.json, is the config file.
 }
 ```
 
-materials: URL where we can find documents.
-server: database server
-user:database user
-password: database password
-port: port where we can find the aplication
+* materials: URL where we can find documents.
+* server: database server
+* user:database user
+* password: database password
+* port: port where we can find the aplication
 
 You have to copy the folder: demoNodejs into your http server (ex:C:\wamp_server\www\demoNodejs).
 
@@ -85,7 +87,8 @@ After the excution you can find a log files in the log folder.
 
 ##Development
 
-Atention:The core of the annotator has been modified for the categories.js plugin.
+~~Atention:The core of the annotator has been modified for the categories.js plugin.~~
+**In this new release Annotator is not modified, this aplication uses 1.2.9 version. The categories plug-in has been rewrited.**
 
 - All the routing in the nodejs application are in the lib\rest\buffer.js
 - update annotation: app.put('/annotation/update/:username/:code/:id', function(req, res)
