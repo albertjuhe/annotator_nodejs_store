@@ -140,6 +140,7 @@ Inside the file demoNodejs/demo.html you can find the store plug-in configuratio
                         showViewPermissionsCheckbox: true,
                         showEditPermissionsCheckbox: false
                     });
+                    //Categories: Name of the annotation: css to apply
                        $('body').annotator().annotator('addPlugin', 'Categories',{
                            errata:'annotator-hl-errata',
                            destacat:'annotator-hl-destacat',
