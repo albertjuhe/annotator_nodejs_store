@@ -26,6 +26,7 @@
       this.annotationCreated = __bind(this.annotationCreated, this);      
       this.AnnotationSection = __bind(this.AnnotationSection, this);
       this.AnnotationCategory = __bind(this.AnnotationCategory, this);
+      this.updateAnnotation = __bind(this.updateAnnotation, this);
 
       this.options.categories = categories;
       Categories.__super__.constructor.apply(this, arguments);
@@ -49,6 +50,8 @@
       //Showing annotations
       this.annotator.subscribe("annotationViewerShown",this.AnnotationViewer);   
 
+      this.annotator.subscribe("annotationUpdated ",this.updateAnnotation);  
+
     };
 
     //After loading annotations we want to change the annotation color and add the annotation id
@@ -67,6 +70,14 @@
         
       }
       
+    };
+
+     //After loading annotations we want to change the annotation color and add the annotation id
+    Categories.prototype.updateAnnotation = function(annotation) {     
+      var category = this.options.categories[annotation.category]; 
+     
+      $(annotation.highlights).attr("class","annotator-hl " + category);   
+     
     };
 
      //After loading annotations we want to change the annotation color and add the annotation id

@@ -191,7 +191,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
       if (annotation.propietary==0) data_owner = "";
 
       var anotacio_capa =  '<li class="annotator-marginviewer-element '+data_type+' '+data_owner+'" data-type="'+annotation.category+'" id="'+anotation_reference +'">'+this.mascaraAnnotation(annotation)+'</li>';
-      var malert = i18n_dict.anotacio_lost
+      var malert = i18n_dict.anotacio_lost;
 
       anotacioObject = $(anotacio_capa).appendTo('.container-anotacions').click(function(event) {
           var  viewportHeight = jQuery(window).height();
