@@ -32,6 +32,12 @@ http://localhost:3000/annotation/testuser3/demo.html
 
 In the annotator display panel you can see the users that are currently viewing the same content, the same contens means the same HTML file.
 
+##Plug-ins Used
+- [Panel Margin View Annotations](https://github.com/albertjuhe/annotator_view)
+- [Annotations Categorization](https://github.com/albertjuhe/annotator_view/blob/master/src/categories.js)
+- [RichEditor](https://github.com/albertjuhe/richEditor)
+- [Share annotations](https://github.com/albertjuhe/Share-annotations-with-SmallUrl-for-Annotatorjs)
+
 ##Installation
 
 You need install several in the nodejs folder package before start (npm install):
