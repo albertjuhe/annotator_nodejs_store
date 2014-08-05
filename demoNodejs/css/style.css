@@ -191,6 +191,11 @@
       
 }
 
+.square {
+    border: 1px solid #b3b3b3;
+    height: 20px;
+}
+
 .annotator-marginviewer-quote {
     border-bottom: 1px solid #cccccc;
     background-color: #f5f5f5;
