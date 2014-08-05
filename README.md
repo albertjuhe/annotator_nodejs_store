@@ -40,6 +40,7 @@ You need install several in the nodejs folder package before start (npm install)
 - log4js (https://github.com/nomiddlename/log4js-node)
 - underscore
 - mysql
+- hasids
 - http
 - request
 - wkhtmltopdf (Export annotaions to PDF format) (https://www.npmjs.org/package/wkhtmltopdf)
