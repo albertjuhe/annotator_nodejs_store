@@ -22,6 +22,8 @@ var express = require('express'),
   , http = require('http')
   , log4js = require('log4js')
   , i18n = require("i18n")
+  , flash   = require('connect-flash')
+  , passport = require('passport')
   , server = http.createServer(app);
 var config = require('./config.json');
 
@@ -57,8 +59,15 @@ app.configure(function(){
 	app.use(express.json());
   app.use(express.urlencoded());
 	app.use(express.methodOverride());
-	app.use(app.router);
-	app.use(express.static(__dirname));
+  app.use(express.cookieParser()); // read cookies (needed for auth)
+  app.use(express.bodyParser()); // get information from html forms
+	app.set('view engine', 'ejs'); // set up ejs for templating 
+  app.use(express.session({ secret: 'fados_produccions' }));
+  app.use(passport.initialize());
+  app.use(passport.session());
+  app.use(flash());
+  app.use(express.static(__dirname));
+  app.use(app.router);
 	app.use('/annotator/css', express.static(__dirname + '/css'));
 	app.use('/annotator/img', express.static(__dirname + '/img'));
   app.use('/annotator/js',express.static(__dirname + '/js'));
@@ -71,7 +80,7 @@ app.configure(function(){
   app.use(i18n.init); //i18n Multiidioma
 })
 
-require('./lib/router/router')(app);
+require('./lib/router/router')(app,passport);
 
 var port  = config.port;
 

@@ -158,7 +158,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
         borrar="";
         }
       var textAnnotation = this.removeTags('iframe',annotation.text);
-      var anotacio_capa =  '<div class="annotator-marginviewer-text"><div class="'+annotation.category+' anotator_color_box"></div><div class="anotador_text">'+ textAnnotation + '</div></div><div class="annotator-marginviewer-text">'+ $.format.date(annotation.data_creacio, "dd/MM/yyyy HH:mm:ss") + '</div><div class="annotator-marginviewer-quote">'+ annotation.quote + '</div><div class="annotator-marginviewer-footer"><span class="'+class_label+'">' + annotation.user + '</span>'+anotacio_compartida+borrar+'</div>';
+      var originalText = this.trimToLength(annotation.quote,200);
+      var anotacio_capa =  '<div class="annotator-marginviewer-text"><div class="'+annotation.category+' anotator_color_box"></div><div class="anotador_text">'+ textAnnotation + '</div></div><div class="annotator-marginviewer-text">'+ $.format.date(annotation.data_creacio, "dd/MM/yyyy HH:mm:ss") + '</div><div class="annotator-marginviewer-quote">'+ originalText + '</div><div class="annotator-marginviewer-footer"><span class="'+class_label+'">' + annotation.user + '</span>'+anotacio_compartida+borrar+'</div>';
       return anotacio_capa;
     };
 
@@ -191,7 +192,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
       if (annotation.propietary==0) data_owner = "";
 
       var anotacio_capa =  '<li class="annotator-marginviewer-element '+data_type+' '+data_owner+'" data-type="'+annotation.category+'" id="'+anotation_reference +'">'+this.mascaraAnnotation(annotation)+'</li>';
-      var malert = i18n_dict.anotacio_lost;
+      var malert = i18n_dict.anotacio_lost
 
       anotacioObject = $(anotacio_capa).appendTo('.container-anotacions').click(function(event) {
           var  viewportHeight = jQuery(window).height();
@@ -245,7 +246,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
       });
     };  
 
-  
+    visorAnotacions.prototype.trimToLength = function(text,m) {
+      return (text.length > m) ? jQuery.trim(text).substring(0, m).split(" ").slice(0, -1).join(" ") + "...": text;
+    };
 
     return visorAnotacions;
 

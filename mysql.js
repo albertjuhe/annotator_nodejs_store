@@ -54,6 +54,16 @@ var MySQL = function(){
 		process.nextTick(desconectar);
 	};
 
+	var query = function(str,data,callback){
+		conectar();
+		
+		connection.query(str, data, function(err, rows, fields) {
+		 	callback(err,rows,fields);
+		});
+	 
+		process.nextTick(desconectar);
+	};
+
 	var clean = function(str,callback){
 		conectar();
 
