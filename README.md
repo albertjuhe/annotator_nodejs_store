@@ -21,6 +21,12 @@ http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/user/de
 
 I've created a [mary](http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/mary/demo.html) and [testuser] (http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/testuser/demo.html).
 
+There is a backend to view stadistics about annotations added, this back end has been developed using [passport] (http://passportjs.org/) and ejs for templating. The backend is in http://localhost:3000/admin
+
+You can enter to the admin using http://localhost:3000/login and you can insert a default admin using this url http://localhost:3000/insertAdmin this url insert a user:Admin and password:pass in the database.
+
+The backoffice has been developed in a file called back_office.js.
+
 ##Demo
 
 You can execute after the installation with: node node_aplicaction_folder/app.js
@@ -51,6 +57,9 @@ You need install several in the nodejs folder package before start (npm install)
 - request
 - wkhtmltopdf (Export annotaions to PDF format) (https://www.npmjs.org/package/wkhtmltopdf)
 - socket.io (http://socket.io/) Who is reading the content. Chat rooms in the future.
+- passport
+- ejs
+- connect-flash
 
 Copy the content of the github into the nodejs folder.
 Inside this folder there is a file called config.json, is the config file.
