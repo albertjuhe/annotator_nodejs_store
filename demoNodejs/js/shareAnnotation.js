@@ -96,25 +96,29 @@ ShareAnnotation.prototype.onClickShare = function(viewer, annotations) {
   var hashids = new Hashids("shared_annotations",8);   
   var data = hashids.encrypt(parseInt(viewer.annotations[0].id));
    
-  if ($('li#sharelink')) $('li#sharelink').remove();
+  if ($('div#sharelink')) $('div#sharelink').remove();
    
   $('<span  id="copy_link" style="float:right"><img src="/annotator/img/Linkicon.png" alt="Copy annotation"/></span>').appendTo(link_layer).click(function(event) {          
 
     var URL= http + "/annotation/share/" + data;
     //var uri = '<input type="text" id="input_url" size="50" onclick="javascript:this.select();" style="margin-top:5px;margin-bottom:5px" class="text" readonly="true" value="'+encodeURI(URL)+'">';
-    var uri = '<label for="urlshare" style="color:#000000">URL to share</label><input type="text" onclick="javascript:this.select();"  class="form-control" readonly="true" value="'+encodeURI(URL)+'">';
-    var modal_window = '<div style="padding:4px;margin:2px" id="sharelink">'+ uri + '</div>';           
-    var link_popup = $('li.annotator-annotation.annotator-item');
-    
-    var number_of_divs = $('li.annotator-annotation.annotator-item div').length;
-
-    if ((number_of_divs-2)>0) {
-      var div_position = number_of_divs-2;
-      if (link_popup) {
-        $('li.annotator-annotation.annotator-item div:eq('+div_position+')').after(modal_window);        
-      } else return 0;
+    if ($('div#sharelink').length) {
+      $('input#urlshare').val(encodeURI(URL));
     } else {
-      console.log('Error in the estidor div structure.');
+      var uri = '<label for="urlshare" style="color:#000000">URL to share</label><input type="text" onclick="javascript:this.select();"  class="form-control" readonly="true" value="'+encodeURI(URL)+'">';
+      var modal_window = '<div style="padding:4px;margin:2px" id="sharelink">'+ uri + '</div>';           
+      var link_popup = $('li.annotator-annotation.annotator-item');
+      
+      var number_of_divs = $('li.annotator-annotation.annotator-item div').length;
+
+      if ((number_of_divs-2)>0) {
+        var div_position = number_of_divs-2;
+        if (link_popup) {
+          $('li.annotator-annotation.annotator-item div:eq('+div_position+')').after(modal_window);        
+        } else return 0;
+      } else {
+        console.log('Error in the estidor div structure.');
+      }
     }
     
   })
