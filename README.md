@@ -21,6 +21,8 @@ http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/user/de
 
 I've created a [mary](http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/mary/demo.html) and [testuser] (http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/testuser/demo.html).
 
+The HTML that we can annotate is an especial HTML5 format, we can achieve this format using an [epub to other formats project](https://github.com/albertjuhe/epub-to-other-formats), this project convert epub, from the [Guttenberg Library](http://www.gutenberg.org/) to other formats, in our case we need the HTML5 annotation format.
+
 There is a backend to view stadistics about annotations added, this back end has been developed using [passport] (http://passportjs.org/) and ejs for templating. The backend is in http://localhost:3000/login
 http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/login
 
