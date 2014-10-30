@@ -109,8 +109,7 @@ After the excution you can find a log files in the log folder.
 
 ##Development
 
-~~Atention:The core of the annotator has been modified for the categories.js plugin.~~
-**In this new release Annotator is not modified, this aplication uses 1.2.9 version. The categories plug-in has been rewrited.**
+**In this new release Annotator is modified, this aplication uses 1.2.9 version.**
 
 - All the routing in the nodejs application are in the lib\rest\buffer.js
 - update annotation: app.put('/annotation/update/:username/:code/:id', function(req, res)
@@ -182,7 +181,7 @@ Inside the file demoNodejs/demo.html you can find the store plug-in configuratio
                             destroy: '/destroy/'+propietary+'/'+code+'/:id'
                         }
                     });
-                   $('body').annotator().annotator('addPlugin', 'visorAnotacions');
+                   $('body').annotator().annotator('addPlugin', 'viewannotator');
                jQuery("body").annotator().annotator('addPlugin', 'Touch', {
                force: location.search.indexOf('force') > -1,
                useHighlighter: location.search.indexOf('highlighter') > -1
