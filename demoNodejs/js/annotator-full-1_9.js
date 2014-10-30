@@ -2243,6 +2243,9 @@
       }
     };
 
+    /*
+    * UPDATE: - Annotator id added.
+    */
     Store.prototype.annotationCreated = function(annotation) {
       if (__indexOf.call(this.annotations, annotation) < 0) {
         this.registerAnnotation(annotation);
@@ -2250,6 +2253,11 @@
           return function(data) {
             if (data.id == null) {
               console.warn(Annotator._t("Warning: No ID returned from server for annotation "), annotation);
+            } else {
+              annotation.id = data.id;
+              $("#id-annotator-temp").attr('id', annotation.id );
+              $("#annotator-temp").attr('id', 'annotation-'+annotation.id );
+              $("#annotation-"+annotation.id).children(".annotator-marginviewer-quote").show();         
             }
             return _this.updateAnnotation(annotation, data);
           };

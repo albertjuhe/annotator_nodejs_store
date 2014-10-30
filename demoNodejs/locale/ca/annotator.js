@@ -11,13 +11,6 @@ var i18n_dict = {
                 "view_annotations"         : "Veure anotacions",
                 "doesnot_suport"           : "El navegador actual no soporta anotacions",
                 "Edit"                     : "Editar",
-                "Delete"                   : "Borrar",
-                "error"                    : "Error",
-                "destacat"                 : "Destacat",
-                "subratllat"               : "Subratllat",
-                "Download_pdf"             : "Descarregar en format PDF",
-                "share"                    : "Compartides",
-                "anotacio_lost"            : "No puc ubicar l'anotació",
-                "own"                      : "Propies"                  
+                "Delete"                   : "Borrar"
               
         };

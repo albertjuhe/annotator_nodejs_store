@@ -32,7 +32,7 @@
                             destroy: '/destroy/'+propietary+'/'+code+'/:id'
                         }
                     });
-                  $('body').annotator().annotator('addPlugin', 'visorAnotacions');
+                  $('body').annotator().annotator('addPlugin', 'AnnotatorViewer');
                   $('body').annotator().annotator('addPlugin', 'ShareAnnotation',{http:host});
 
                 

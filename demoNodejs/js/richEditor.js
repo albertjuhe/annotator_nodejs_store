@@ -39,7 +39,8 @@ RichEditor.prototype.pluginInit = function() {
       });
     this.annotator
       .subscribe("annotationEditorShown", function (annotation) {
-         var text = typeof annotation.annotation.text!='undefined'?annotation.annotation.text:'';         
+         var text = typeof annotation.annotation.text!='undefined'?annotation.annotation.text:'';   
+         tinymce.activeEditor.focus();      
          tinymce.activeEditor.setContent(text);
   
       });
@@ -53,8 +54,6 @@ RichEditor.prototype.pluginInit = function() {
         load: function (field, annotation) {
           EditorViewerTextField = $(field.parentElement).find('div:first-of-type');
           $(EditorViewerTextField).html(annotation.text);
-          
-          console.log(annotation.text);
         }
       })
 

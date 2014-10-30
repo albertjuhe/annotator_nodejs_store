@@ -12,11 +12,5 @@ var i18n_dict = {
                 "doesnot_suport"           : "Sorry your current browser does not support the Annotator",
                 "Edit"                     : "Edit",
                 "Delete"                   : "Delete",
-                "error"                    : "Error",
-                "destacat"                 : "Underlined",
-                "subratllat"               : "Highlight",
-                "Download_pdf"             : "Download in PDF format",
-                "share"                    : "Shared",
-                "anotacio_lost"            : "Can't find the annotation",
-                "own"                      : "My annotations"                                                     
+                "confirm_delete"           : "Do you want to delete this annotation?"
         };

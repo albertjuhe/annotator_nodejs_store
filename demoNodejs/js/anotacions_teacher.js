@@ -31,7 +31,7 @@
                             destroy: '/destroy/'+code+'/:id'
                         }
                     });
-                   $('body').annotator().annotator('addPlugin', 'visorAnotacions');
+                   $('body').annotator().annotator('addPlugin', 'AnnotatorViewer');
 				   jQuery("body").annotator().annotator('addPlugin', 'Touch', {
 					force: location.search.indexOf('force') > -1,
 					useHighlighter: location.search.indexOf('highlighter') > -1
