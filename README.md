@@ -28,7 +28,7 @@ The HTML that we can annotate is an especial HTML5 format, we can achieve this f
 There is a backend to view stadistics about annotations added, this back end has been developed using [passport] (http://passportjs.org/) and ejs for templating. The backend is in http://localhost:3000/login
 http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/login
 
-You can enter to the admin using http://localhost:3000/login and you can insert a default admin using this url http://localhost:3000/insertAdmin this url insert a user:Admin and password:pass in the database.
+You can enter to the admin using http://localhost:3000/login user:testAdmin and password:password.
 
 The backoffice has been developed in a file called back_office.js.
 
