@@ -30,7 +30,7 @@ var MySQL = function(){
 		 database : config.database,
 		 user     : config.user,
 		 password : config.password,
-		 port     : config.database_port,
+		 port     : config.database_port
 	};
 	var conectar = function(){
 		

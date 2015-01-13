@@ -24,7 +24,8 @@ var express = require('express'),
   , i18n = require("i18n")
   , flash   = require('connect-flash')
   , passport = require('passport')
-  , server = http.createServer(app);
+  , server = http.createServer(app)
+  , multer  = require('multer');
 var config = require('./config.json');
 
 __dirname = 'C:\\wamp_server\\www\\demoNodejs\\';
@@ -56,29 +57,47 @@ app.set('user', config.user);
 app.set('password', config.password);
 
 app.configure(function(){
-	app.use(express.json());
-  app.use(express.urlencoded());
-	app.use(express.methodOverride());
+  app.use(express.json()); // handles application/json
+  app.use(express.urlencoded()); //handles application/x-www-form-urlencoded
+    // Upload files control
+    app.use(multer({ dest: './uploads/',
+        rename: function (fieldname, filename) {
+            return filename.replace(/\W+/g, '-').toLowerCase() + Date.now()
+        },
+        onFileUploadStart: function (file) {
+            console.log(file.originalname + ' is starting ...')
+        },
+        onFileUploadComplete: function (file) {
+            console.log(file.fieldname + ' uploaded to  ' + file.path)
+        }
+    }));
+  app.use(express.methodOverride());
   app.use(express.cookieParser()); // read cookies (needed for auth)
-  app.use(express.bodyParser()); // get information from html forms
-	app.set('view engine', 'ejs'); // set up ejs for templating 
+  // app.use(express.bodyParser()); // get information from html forms
+  app.set('view engine', 'ejs'); // set up ejs for templating
   app.use(express.session({ secret: 'fados_produccions' }));
   app.use(passport.initialize());
   app.use(passport.session());
   app.use(flash());
   app.use(express.static(__dirname));
+
   app.use(app.router);
-	app.use('/annotator/css', express.static(__dirname + '/css'));
-	app.use('/annotator/img', express.static(__dirname + '/img'));
+
+  app.use('/annotator/css', express.static(__dirname + '/css'));
+  app.use('/annotator/img', express.static(__dirname + '/img'));
   app.use('/annotator/js',express.static(__dirname + '/js'));
   app.use('/annotator/locale',express.static(__dirname + '/locale'));
   app.use('/css', express.static(__dirname + '/css'));
   app.use('/img', express.static(__dirname + '/img'));
   app.use('/js',express.static(__dirname + '/js'));
   app.use('/locale',express.static(__dirname + '/locale'));
+
   app.use(log4js.connectLogger(logger, { level: log4js.levels.INFO }));
+
   app.use(i18n.init); //i18n Multiidioma
 })
+
+
 
 require('./lib/router/router')(app,passport);
 

@@ -1,0 +1,7 @@
+A computer scientist is a scientist who has acquired knowledge of computer science, the study of the theoretical foundations of information and computation and their application.
+
+Computer scientists typically work on the theoretical side of computer systems, as opposed to the hardware side that computer engineers mainly focus on (although there is overlap). Although computer scientists can also focus their work and research on specific areas (such as algorithm and data structure development and design, software engineering, information theory, database theory, computational complexity theory, numerical analysis, programming language theory, computer graphics, and computer vision), their foundation is the theoretical study of computing from which these other fields derive.[1]
+
+A primary goal of computer scientists is the development (and validation) of models—often mathematical in nature—for estimating the properties of computer-based systems (processors, programs, computers interaction with people, computers interacting with other computers,..) with an overarching objective of discovering designs that admit for improved performance (faster, better, cheaper,..).
+
+Most computer scientists are required to possess a Ph.D., M.S., or B.S. in Computer Science or a closely related discipline such as mathematics.[1] A strong aptitude for mathematics is important for a computer scientist.

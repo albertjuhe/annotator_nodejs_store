@@ -65,6 +65,7 @@ You need install several in the nodejs folder package before start (npm install)
 - passport
 - ejs
 - connect-flash
+- multer (upload files)
 
 Copy the content of the github into the nodejs folder.
 Inside this folder there is a file called config.json, is the config file.
@@ -107,38 +108,7 @@ demo.html is the file that you can find inside the demoNodejs, you can copy othe
 
 After the excution you can find a log files in the log folder.
 
-##Development
-
-**In this new release Annotator is modified, this aplication uses 1.2.9 version.**
-
-- All the routing in the nodejs application are in the lib\rest\buffer.js
-- update annotation: app.put('/annotation/update/:username/:code/:id', function(req, res)
-- delete annotation app.delete('/annotation/destroy/:username/:code/:id', function(req, res) 
-- get annotations app.get('/annotation/get/:username/:code', function(req, res)
-- get HTML file and render: app.get('/annotation/:username/:code.html', function(req, res)
-- new annotation: app.post('/annotation/new/:username/:code', function(req, res)
-- get annotations in pdf format: app.get('/annotation/:username/:code.pdf', function(req, res)
-
-When a user is displaying a document for example:
-http://localhost:3000/annotation/testuser2/demo.html nodejs are executing (get), the aplication search in the anotations table, all the annotations belonging to testuser2 with code equal to demo.
-
-##Plugins
-
-There are a several Annotator plugins:
-- Panel Viewer Plugin (demoNodejs/js/viewannotations.js)
-- Categorization plugin (demoNodejs/js/categories.js)
-- RichEditor Plugin (demoNodejs/js/richEditor.js) Use tinymc 4.0
-- Share annotations
-- Categorize plugin
-
-##Database
-
-there are two tables:
-Table anotacions where we store annotations.
-Table log where we store the logs.
-
-
-Inside the file demoNodejs/demo.html you can find the store plug-in configuration, with the rest services.
+Inside the file demoNodejs/demoNodejs/js/annotator_init.js you can find the plug-ins configuration for annotations.
 
 ```html
  <script>
@@ -147,10 +117,9 @@ Inside the file demoNodejs/demo.html you can find the store plug-in configuratio
       var code = '{$__code__$}';
 
       jQuery(function($) {
-                    //Internazionalization
-                    $.i18n.load(i18n_dict);
-                   
-                 
+
+                    $.i18n.load(i18n_dict); //Internazionalization
+
                     var annotator = $('body').annotator().annotator().data('annotator');
                     annotator.addPlugin('Permissions', {
                         user: propietary,
@@ -195,18 +164,61 @@ Inside the file demoNodejs/demo.html you can find the store plug-in configuratio
          socket.on('notification', function (data) {
             var n = data.online;
              $('#count-anotations-alert').text(n);
-           
+
       });
       </script>
 ```
 
-      The content of the variable propietary are overwrite by the nodejs,   
+      The content of the variable propietary are overwrite by the nodejs,
 
       var propietary = '{$__propietary__$}';
       var code = '{$__code__$}';.
 
-      Its important that the socket.io connection 
-      var socket = io.connect('http://localhost:3000'); 
+      Its important that the socket.io connection
+      var socket = io.connect('http://localhost:3000');
       use the same port than the nodejs.
+
+      When a user is displaying a document for example:
+      http://localhost:3000/annotation/testuser2/demo.html nodejs are executing (get), the aplication search in the anotations table, all the annotations belonging to testuser2 with code equal to demo.
+
+##Plugins
+
+There are a several Annotator plugins:
+- Panel Viewer Plugin (demoNodejs/js/viewannotations.js)
+- Categorization plugin (demoNodejs/js/categories.js)
+- RichEditor Plugin (demoNodejs/js/richEditor.js) Use tinymc 4.0
+- Share annotations
+- Categorize plugin
+
+##Annotator Development
+
+**In this new release Annotator is modified, this aplication uses 1.2.9 version.**
+- Store.prototype.annotationCreated = function(annotation) has been modified, added an id annotation attribute.
+
+##Nodejs Development
+
+- All the routing in the nodejs application are in the lib\rest\buffer.js
+
+REST Services Annotatorjs vs. Nodejs
+
+- update annotation: app.put('/annotation/update/:username/:code/:id', function(req, res)
+- delete annotation app.delete('/annotation/destroy/:username/:code/:id', function(req, res) 
+- get annotations app.get('/annotation/get/:username/:code', function(req, res)
+- get HTML file and render: app.get('/annotation/:username/:code.html', function(req, res)
+- new annotation: app.post('/annotation/new/:username/:code', function(req, res)
+- get annotations in pdf format: app.get('/annotation/:username/:code.pdf', function(req, res)
+- BackOffice control in lib\rest\back_office.js. User back office control.
+
+##Database
+
+there are two tables:
+Table anotacions where we store annotations.
+Table log where we store the logs.
+
+
+
+
+
+
 
 
