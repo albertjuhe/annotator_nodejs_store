@@ -30,7 +30,7 @@ http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/login
 
 You can enter to the admin using http://localhost:3000/login user:testAdmin and password:password.
 
-The backoffice has been developed in a file called back_office.js.
+The backoffice has been developed in a file called backOfficeRouting.js.
 
 ##Demo
 
@@ -66,6 +66,7 @@ You need install several in the nodejs folder package before start (npm install)
 - ejs
 - connect-flash
 - multer (upload files)
+- express-namespace //Namespaces in express routes
 
 Copy the content of the github into the nodejs folder.
 Inside this folder there is a file called config.json, is the config file.
@@ -208,6 +209,50 @@ REST Services Annotatorjs vs. Nodejs
 - new annotation: app.post('/annotation/new/:username/:code', function(req, res)
 - get annotations in pdf format: app.get('/annotation/:username/:code.pdf', function(req, res)
 - BackOffice control in lib\rest\back_office.js. User back office control.
+
+##Upload files
+We need to upload files that will be annotated, this files will be uploaded in epub format.
+We use the 'multer' lib.
+
+First we need to handle application/x-www-form-urlencoded for uploading, we have to add app.use(express.urlencoded());
+in the app.js.
+
+After this we need to control the uploading, for this stuff we use multer lib. After upload we rename the file, unique name.
+
+```javascript
+    var upload_folder = './upload';
+    app.use(multer({ dest: upload_folder,
+        rename: function (fieldname, filename) {
+            return filename.replace(/\W+/g, '-').toLowerCase() + Date.now()
+        },
+        onFileUploadStart: function (file) {
+            console.log(file.originalname + ' is starting ...')
+        },
+        onFileUploadComplete: function (file) {
+            console.log(file.fieldname + ' uploaded to  ' + file.path)
+        }
+    }));
+```
+
+
+After Uploading a file, we can bind a special behaviour.
+
+```javascript
+ app.post('/upload', function(req, res) {
+        console.log("New file added");
+        console.log(process.cwd());
+        res.redirect('/profile');
+    });
+```
+
+##BackOffice
+The Back office Routing is in the backOfficeRouting.js, to control user access we use passport and a passport-local strategy:
+```javascript
+    var LocalStrategy   = require('passport-local').Strategy;
+```
+
+Passport needs several functions to control user access as passport.serializeUser, passport.deserializeUser and isLoggedIn.
+All this functions uses the UserController (DAO/user.js) class and the user model (model/user.js) to control Users using MySQL. For encription we use bcrypt-nodejs library.
 
 ##Database
 
