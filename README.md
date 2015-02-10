@@ -51,7 +51,18 @@ In the annotator display panel you can see the users that are currently viewing 
 
 ##Installation
 
-You need install several in the nodejs folder package before start (npm install):
+First you have to install nodejs [http://nodejs.org/download/]. (For example I have installed in C:\nodejs).
+
+This aplication uses MySQL and Apache 4.2.2, you need to install Xampp [https://www.apachefriends.org/index.html], or similar software. Xamps installs Apache, MySQL, PHP and Perl.
+
+Now you have to download this project and unzip it, for example inside de nodejs folder c:\nodejs\annotator_nodejs_store.
+
+Now you need to install all the libraries (modules) that needs the aplication to work. 
+Use the sentence 
+c:\nodejs\npm> install -g [module] 
+or
+c:\nodejs\annotator_nodejs_store> install [module]
+You need install this modules:
 - express (http://expressjs.com/)
 - i18n (https://github.com/mashpie/i18n-node)
 - log4js (https://github.com/nomiddlename/log4js-node)
@@ -68,8 +79,7 @@ You need install several in the nodejs folder package before start (npm install)
 - multer (upload files)
 - express-namespace //Namespaces in express routes
 
-Copy the content of the github into the nodejs folder.
-Inside this folder there is a file called config.json, is the config file.
+Inside this folder c:\nodejs\annotator_nodejs_store\config.json there is a file called config.json, is the config file.
 
 ```json
  {
@@ -84,26 +94,25 @@ Inside this folder there is a file called config.json, is the config file.
 }
 ```
 
-* materials: URL where we can find documents.
+* materials: URL where we can find documents that has to be annotated (for this reason needs xamp). In this case, http://localhost/demoNodejs/, if you have xampp installed in the c:\xampp folder the folder http://localhost/demoNodejs/ will be C:\xampp\htdocs\demoNodejs. You have to copy the content of demoNodeJs folder project to C:\xampp\htdocs\demoNodejs.
 * server: database server
 * user:database user
 * password: database password
-* port: port where we can find the aplication
+* port: port where we can find the aplication (Ex:3000) the application works in the port number 3000.
 
-You have to copy the folder: demoNodejs into your http server (ex:C:\wamp_server\www\demoNodejs).
-
-For the PDF export anotations, firts install wkhtmltopdf and configure it, follow the web site instructions.
-After this you have to update the app.js file, you have to change the line:
+After this you have to update the app.js file, is folder where are the documents that needs to be annotated.
 
 ```nodejs
  __dirname = 'C:\\wamp_server\\www\\demoNodejs\\';
 ```
 
- and change for the folder where are the js,css,locale,etc..., if you follow the installation steps you can't change this line.
+For the PDF export anotations, firts install wkhtmltopdf and configure it, follow the web site instructions.
 
- Inside the sql folder you can find the database sample structure that I have created, open the sql files and execute the content in a mysql database.
+Inside the c:\nodejs\annotator_nodejs_store\sql folder you can find the database sample structure that I have created, open the sql files and execute the content in a mysql database.
 
-The file that you have to execute is app.js, ex:nodejs folder_name/app.js and from the browser, If you haven't change the port, with http://localhost:3000/annotation/testuser/demo.html, if you want to test with diferent user only change the username.
+The file that you have to execute is app.js, 
+c:\nodejs\nodejs annotator_nodejs_store\app.js 
+and from the browser, If you haven't change the port, with http://localhost:3000/annotation/testuser/demo.html, if you want to test with diferent user only change the username.
 
 demo.html is the file that you can find inside the demoNodejs, you can copy other files inside this folder and put the annotateit javascript inside to test with other files.
 
