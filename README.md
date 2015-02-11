@@ -190,13 +190,20 @@ the appender -> filename. C:\\nodejs\\annotator_nodejs_store\\logs\\anotacions.l
 
 Inside the c:\nodejs\annotator_nodejs_store\sql folder you can find the database sample structure that I have created, open the sql files and execute the content in a mysql database.
 
-The file that you have to execute is app.js, 
-c:\nodejs\nodejs annotator_nodejs_store\app.js 
-and from the browser, If you haven't change the port, with http://localhost:3000/annotation/testuser/demo.html, if you want to test with diferent user only change the username.
+there are two tables:
+Table anotacions where we store annotations.
+Table log where we store the logs.
 
-demo.html is the file that you can find inside the demoNodejs, you can copy other files inside this folder and put the annotateit javascript inside to test with other files.
+### Execute
 
-After the excution you can find a log files in the log folder.
+The file that you have to execute is app.js (c:\nodejs\nodejs annotator_nodejs_store\app.js).
+```
+node app.js
+```
+
+and from the browser, If you haven't change the port, with http://localhost:3000/annotation/testuser/demo.html, if you want to test with diferent user only change the username (testuser).
+
+### Annotatorjs config
 
 Inside the file demoNodejs/demoNodejs/js/annotator_init.js you can find the plug-ins configuration for annotations.
 
@@ -343,11 +350,6 @@ The Back office Routing is in the backOfficeRouting.js, to control user access w
 Passport needs several functions to control user access as passport.serializeUser, passport.deserializeUser and isLoggedIn.
 All this functions uses the UserController (DAO/user.js) class and the user model (model/user.js) to control Users using MySQL. For encription we use bcrypt-nodejs library.
 
-##Database
-
-there are two tables:
-Table anotacions where we store annotations.
-Table log where we store the logs.
 
 
 
