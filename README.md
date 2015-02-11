@@ -134,6 +134,8 @@ c:\nodejs\annotator_nodejs_store>npm install connect-flash
 - multer (upload files)
 - express-namespace //Namespaces in express routes
 
+For the PDF export anotations, firts install wkhtmltopdf (https://www.npmjs.com/package/wkhtmltopdf) and configure it, follow the web site instructions.
+
 ### Config project
 
 Inside the app.js there is an important variable: __dirname, is the folder where nodejs search css,js,images and html files.
@@ -163,13 +165,20 @@ Inside this folder c:\nodejs\annotator_nodejs_store\config.json there is a file 
 * password: database password
 * port: port where we can find the aplication (Ex:3000) the application works in the port number 3000.
 
-After this you have to update the app.js file, is folder where are the documents that needs to be annotated.
-
-```nodejs
- __dirname = 'C:\\wamp_server\\www\\demoNodejs\\';
+Log4js config:
 ```
+// Logger configuration
+log4js.configure({
+ appenders: [
+   { type: 'console', category: 'loggerAnotacionsConsole' },
+   { type: 'file', filename: './logs/anotacions.log', category: 'loggerAnotacionsFile' }
+  ]
+});
+```
+We need this folder and file:
+the appender -> filename. C:\\nodejs\\annotator_nodejs_store\\logs\\anotacions.log. 
 
-For the PDF export anotations, firts install wkhtmltopdf and configure it, follow the web site instructions.
+### Database
 
 Inside the c:\nodejs\annotator_nodejs_store\sql folder you can find the database sample structure that I have created, open the sql files and execute the content in a mysql database.
 
