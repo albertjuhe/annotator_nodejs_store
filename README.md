@@ -53,8 +53,9 @@ In the annotator display panel you can see the users that are currently viewing 
 
 First you have to install nodejs [http://nodejs.org/download/]. (For example I have installed in C:\nodejs).
 
-This aplication uses MySQL and Apache 4.2.2, you need to install Xampp [https://www.apachefriends.org/index.html], or similar software. Xamps installs Apache, MySQL, PHP and Perl.
+This aplication uses MySQL and Apache 4.2.2, you need to install Xampp [https://www.apachefriends.org/index.html], Wampp [http://www.wampserver.com/en/], or similar software. Xampp and Wampp installs Apache, MySQL, PHP, phpMyAdmin and Perl.
 
+### Download 
 There are two ways to download the project: Using Git clone or download the last Release.
 * With Git you first need to have installed the Git and execute from the command line 
 ```
