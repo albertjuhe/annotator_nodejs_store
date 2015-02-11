@@ -55,7 +55,12 @@ First you have to install nodejs [http://nodejs.org/download/]. (For example I h
 
 This aplication uses MySQL and Apache 4.2.2, you need to install Xampp [https://www.apachefriends.org/index.html], or similar software. Xamps installs Apache, MySQL, PHP and Perl.
 
-Now you have to download this project and unzip it, for example inside de nodejs folder c:\nodejs\annotator_nodejs_store.
+There are two ways to download the project: Using Git clone or download the last Release.
+* With Git you first need to have installed the Git and execute from the command line 
+```
+c:\nodejs\>git clone https://github.com/albertjuhe/annotator_nodejs_store.git
+```
+* Download the last release. Its in Zip format you have to unzip it, for example inside de nodejs folder c:\nodejs\annotator_nodejs_store.
 
 Now you need to install all the libraries (modules) that needs the aplication to work. 
 Use the sentence 
@@ -94,7 +99,7 @@ Inside this folder c:\nodejs\annotator_nodejs_store\config.json there is a file 
 }
 ```
 
-* materials: URL where we can find documents that has to be annotated (for this reason needs xamp). In this case, http://localhost/demoNodejs/, if you have xampp installed in the c:\xampp folder the folder http://localhost/demoNodejs/ will be C:\xampp\htdocs\demoNodejs. You have to copy the content of demoNodeJs folder project to C:\xampp\htdocs\demoNodejs.
+* materials: URL where we can find documents that will be annotated (for this reason needs xamp). In this case, http://localhost/demoNodejs/, if you have xampp installed in the c:\xampp folder the folder http://localhost/demoNodejs/ will be C:\xampp\htdocs\demoNodejs. You have to copy the content of demoNodeJs folder project to C:\xampp\htdocs\demoNodejs.
 * server: database server
 * user:database user
 * password: database password
