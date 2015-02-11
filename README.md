@@ -93,13 +93,13 @@ Because need some external libraries (modules). In this case node says that can'
 
 Now you need to install all the libraries (modules) that needs the aplication to work. 
 Use the sentence 
-c:\nodejs\npm> install -g [module] 
-or
-c:\nodejs\annotator_nodejs_store> install [module]
+c:\nodejs\> install -g [module] or c:\nodejs\annotator_nodejs_store> install [module]
 You need install this modules:
 - express (http://expressjs.com/)
-- i18n (https://github.com/mashpie/i18n-node)
-- log4js (https://github.com/nomiddlename/log4js-node)
+- i18n (https://github.com/mashpie/i18n-node). This modules for work with different languages.
+c:\nodejs\annotator_nodejs_store>npm install i18n
+- log4js (https://github.com/nomiddlename/log4js-node). This module stores a log message similar to log4j (java).
+c:\nodejs\annotator_nodejs_store>npm install log4js
 - underscore
 - mysql
 - hasids
@@ -107,9 +107,10 @@ You need install this modules:
 - request
 - wkhtmltopdf (Export annotaions to PDF format) (https://www.npmjs.org/package/wkhtmltopdf)
 - socket.io (http://socket.io/) Who is reading the content. Chat rooms in the future.
-- passport
+- passport [http://passportjs.org/], Simple, unobtrusive authentication for Node.js
 - ejs
 - connect-flash
+c:\nodejs\annotator_nodejs_store>npm install connect-flash
 - multer (upload files)
 - express-namespace //Namespaces in express routes
 
