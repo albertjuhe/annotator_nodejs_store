@@ -96,6 +96,9 @@ Use the sentence
 c:\nodejs\> install -g [module] or c:\nodejs\annotator_nodejs_store> install [module]
 You need install this modules:
 - express (http://expressjs.com/)
+```
+c:\nodejs\annotator_nodejs_store>npm install express --save
+```
 - i18n (https://github.com/mashpie/i18n-node). This modules for work with different languages.
 ```
 c:\nodejs\annotator_nodejs_store>npm install i18n
@@ -106,6 +109,9 @@ c:\nodejs\annotator_nodejs_store>npm install log4js
 ```
 - underscore
 - mysql
+```
+c:\nodejs\annotator_nodejs_store>npm install mysql
+```
 - hashids. Used to generate unique key.
 ```
 c:\nodejs\annotator_nodejs_store>npm install hashids
@@ -138,10 +144,12 @@ For the PDF export anotations, firts install wkhtmltopdf (https://www.npmjs.com/
 
 ### Config project
 
-Inside the app.js there is an important variable: __dirname, is the folder where nodejs search css,js,images and html files.
+Inside the app.js there is an important variable: __dirname, is the folder where nodejs search css,js and images.
 ```
 __dirname = 'C:\\nodejs\\annotator_nodejs_store\\demoNodejs\\';
 ```
+
+The documents that have to be annotated must be copied to the http://localhost/demoNodejs/ (C:\wamp_server\www\demoNodejs) folder.
 
 Inside this folder c:\nodejs\annotator_nodejs_store\config.json there is a file called config.json, is the config file.
 
@@ -159,7 +167,7 @@ Inside this folder c:\nodejs\annotator_nodejs_store\config.json there is a file 
 }
 ```
 
-* materials: URL where we can find documents that will be annotated (for this reason needs xamp). In this case, http://localhost/demoNodejs/, if you have xampp installed in the c:\xampp folder the folder http://localhost/demoNodejs/ will be C:\xampp\htdocs\demoNodejs. You have to copy the content of demoNodeJs folder project to C:\xampp\htdocs\demoNodejs.
+* materials: URL where we can find documents that will be annotated (for this reason needs xampp or wampp). In this case, http://localhost/demoNodejs/, if you have wampp installed in the C:\wamp_server folder the folder http://localhost/demoNodejs/ will be C:\wamp_server\www\demoNodejs.
 * server: database server
 * user:database user
 * password: database password
@@ -175,7 +183,7 @@ log4js.configure({
   ]
 });
 ```
-We need this folder and file:
+We need this folder and file to store logs:
 the appender -> filename. C:\\nodejs\\annotator_nodejs_store\\logs\\anotacions.log. 
 
 ### Database
