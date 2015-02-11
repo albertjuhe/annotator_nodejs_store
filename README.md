@@ -188,11 +188,27 @@ the appender -> filename. C:\\nodejs\\annotator_nodejs_store\\logs\\anotacions.l
 
 ### Database
 
-Inside the c:\nodejs\annotator_nodejs_store\sql folder you can find the database sample structure that I have created, open the sql files and execute the content in a mysql database.
+Create the database annotations, database variable..
+```json
+#C:\nodejs\annotator_nodejs_store\config.json
+ {
+    ...
+    "server": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "annotations",   
+    "database_port":3306,
+    ...
 
-there are two tables:
+}
+```
+Inside the c:\nodejs\annotator_nodejs_store\sql folder you can find the database sample structure that I have created, open the sql files and execute the content in a annotations mysql database.
+
+There are two tables:
 Table anotacions where we store annotations.
 Table log where we store the logs.
+Table last-login. Last login to the backoffice
+Table users: Back office users
 
 ### Execute
 
