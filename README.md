@@ -97,24 +97,49 @@ c:\nodejs\> install -g [module] or c:\nodejs\annotator_nodejs_store> install [mo
 You need install this modules:
 - express (http://expressjs.com/)
 - i18n (https://github.com/mashpie/i18n-node). This modules for work with different languages.
+```
 c:\nodejs\annotator_nodejs_store>npm install i18n
+```
 - log4js (https://github.com/nomiddlename/log4js-node). This module stores a log message similar to log4j (java).
+```
 c:\nodejs\annotator_nodejs_store>npm install log4js
+```
 - underscore
 - mysql
-- hasids
+- hashids. Used to generate unique key.
+```
+c:\nodejs\annotator_nodejs_store>npm install hashids
+```
 - http
 - request
 - wkhtmltopdf (Export annotaions to PDF format) (https://www.npmjs.org/package/wkhtmltopdf)
 - socket.io (http://socket.io/) Who is reading the content. Chat rooms in the future.
 - passport [http://passportjs.org/], Simple, unobtrusive authentication for Node.js
+```
+c:\nodejs\annotator_nodejs_store>npm install passport
+```
+- bcrypt-nodejs. Used for passport module
+```
+c:\nodejs\annotator_nodejs_store>npm install bcrypt-nodejs
+```
+- passport-local. Used for passport module
+```
+c:\nodejs\annotator_nodejs_store>npm install passport-local
+```
 - ejs
 - connect-flash
+```
 c:\nodejs\annotator_nodejs_store>npm install connect-flash
+```
 - multer (upload files)
 - express-namespace //Namespaces in express routes
 
 ### Config project
+
+Inside the app.js there is an important variable: __dirname, is the folder where nodejs search css,js,images and html files.
+```
+__dirname = 'C:\\nodejs\\annotator_nodejs_store\\demoNodejs\\';
+```
 
 Inside this folder c:\nodejs\annotator_nodejs_store\config.json there is a file called config.json, is the config file.
 
