@@ -214,10 +214,15 @@ Table users: Back office users
 
 The file that you have to execute is app.js (c:\nodejs\nodejs annotator_nodejs_store\app.js).
 ```
-node app.js
+(c:\nodejs\nodejs annotator_nodejs_store\node app.js
 ```
 
 and from the browser, If you haven't change the port, with http://localhost:3000/annotation/testuser/demo.html, if you want to test with diferent user only change the username (testuser).
+
+###PDF
+Install wkhtmltopdf (http://wkhtmltopdf.org/downloads.html). (ex: c:\wkhtmltopdf).
+
+To export the annotatios to pdf you need to configure the PATH (environment variables) to c:\wkhtmltopdf\bin.
 
 ### Annotatorjs config
 
