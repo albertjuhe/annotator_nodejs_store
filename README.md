@@ -64,6 +64,31 @@ c:\nodejs\>git clone https://github.com/albertjuhe/annotator_nodejs_store.git
 ```
 * Download the last release. Its in Zip format you have to unzip it, for example inside de nodejs folder c:\nodejs\annotator_nodejs_store.
 
+The file that needs to start the aplication is app.js. If you try to execute the project with:
+```
+node app.js
+```
+Node likely throw and exception like this:
+```
+C:\nodejs\annotator_nodejs_store>node app.js
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module 'log4js'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Module.require (module.js:364:17)
+    at require (module.js:380:17)
+    at Object.<anonymous> (C:\nodejs\annotator_nodejs_store\app.js:24:14)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Function.Module.runMain (module.js:497:10)
+ ```
+Because need some external libraries (modules). In this case node says that can't find log4js module, to figure out this you need to install node modules.
+
 ### Install node modules
 
 Now you need to install all the libraries (modules) that needs the aplication to work. 
@@ -93,6 +118,7 @@ You need install this modules:
 Inside this folder c:\nodejs\annotator_nodejs_store\config.json there is a file called config.json, is the config file.
 
 ```json
+#C:\nodejs\annotator_nodejs_store\config.json
  {
     "materials": "http://localhost/demoNodejs/",
     "server": "localhost",
