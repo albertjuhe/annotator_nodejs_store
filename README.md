@@ -51,17 +51,20 @@ In the annotator display panel you can see the users that are currently viewing 
 
 ##Installation
 
+### Download basics
 First you have to install nodejs [http://nodejs.org/download/]. (For example I have installed in C:\nodejs).
 
 This aplication uses MySQL and Apache 4.2.2, you need to install Xampp [https://www.apachefriends.org/index.html], Wampp [http://www.wampserver.com/en/], or similar software. Xampp and Wampp installs Apache, MySQL, PHP, phpMyAdmin and Perl.
 
-### Download 
+### Download project
 There are two ways to download the project: Using Git clone or download the last Release.
 * With Git you first need to have installed the Git and execute from the command line 
 ```
 c:\nodejs\>git clone https://github.com/albertjuhe/annotator_nodejs_store.git
 ```
 * Download the last release. Its in Zip format you have to unzip it, for example inside de nodejs folder c:\nodejs\annotator_nodejs_store.
+
+### Install node modules
 
 Now you need to install all the libraries (modules) that needs the aplication to work. 
 Use the sentence 
@@ -84,6 +87,8 @@ You need install this modules:
 - connect-flash
 - multer (upload files)
 - express-namespace //Namespaces in express routes
+
+### Config project
 
 Inside this folder c:\nodejs\annotator_nodejs_store\config.json there is a file called config.json, is the config file.
 
