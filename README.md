@@ -216,7 +216,12 @@ The file that you have to execute is app.js (c:\nodejs\nodejs annotator_nodejs_s
 ```
 (c:\nodejs\nodejs annotator_nodejs_store\node app.js
 ```
-
+In the console you must view
+```
+[2015-01-01 11:18:40.998] [DEBUG] loggerAnotacionsConsole - Loaded.3000
+   info  - socket.io started
+ ```
+ 
 and from the browser, If you haven't change the port, with http://localhost:3000/annotation/testuser/demo.html, if you want to test with diferent user only change the username (testuser).
 
 ###PDF
