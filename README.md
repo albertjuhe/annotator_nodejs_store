@@ -3,13 +3,14 @@ Annotator with Nodejs + express + socket.io + MySQL
 
 ##Annotator with Nodejs + express + socket.io + MySQL
 
-Is a sample and a simple aplication that uses the Annotateit (http://annotateit.org/) with nodejs and Mysql as a back store. The main aim is create an application for make annotations to the project Guttenberg books.
+Is a sample and a simple aplication that uses the Annotateit (http://annotateit.org/) with nodejs and Mysql as a back store.
+
 There is a folder called demoNodejs, this folder contains a  demo and several plug-ins, a category plug-in, store plug-in, and a panel viewer plugin (https://github.com/okfn/annotator/wiki). 
 This aplication let you store, delete and update annotations, export anotations to PDF, display annotations in a right panel viewer, create annotations with Tinymce, categorize annotations and share annotations.
 
 The annotations are displayed in the right panel with an icon for deleting, editing using TinyMce, and a little eye, it means that the annotations is shared. If you are the owner of the annotations your username is displayed in a white background, if not it is displayed in a gray background.
 
-The book that will be annotate, could be imported from the Guttenber ebooks in epub format, I've created a paralel project that allow us do that.
+The documents that you can anotate could be created by hand or usign a paralel tool that I have created, this tool converts a epub (ebook) to HTML5 document that can be annotated. We could import from the Guttenber ebooks in epub format (https://github.com/albertjuhe/epub-to-other-formats).
 
 This Application uses [annotator 1.2.9] (https://github.com/openannotation/annotator/releases/tag/v1.2.9)
 
