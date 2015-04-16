@@ -2,16 +2,155 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b1b52a-83c1-4e07-8ec0-8a13c9ada326" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\nodejs\plug_in_nodejs\lib\rest\back_office.js" afterPath="$PROJECT_DIR$/lib/handlers/backOfficeRouting.js" />
-      <change type="MOVED" beforePath="C:\nodejs\plug_in_nodejs\lib\rest\buffer.js" afterPath="$PROJECT_DIR$/lib/handlers/annotatorRouting.js" />
-      <change type="MOVED" beforePath="C:\nodejs\plug_in_nodejs\mysql.js" afterPath="$PROJECT_DIR$/lib/database/mysql.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/database/poolling.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/.npmignore" afterPath="$PROJECT_DIR$/node_modules/mysql/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/mysql/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Auth.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Auth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/ChangeUser.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/ChangeUser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/Changes.md" afterPath="$PROJECT_DIR$/node_modules/mysql/Changes.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ClientAuthenticationPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ClientAuthenticationPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComChangeUserPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComChangeUserPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComPingPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComPingPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComQueryPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComQueryPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComQuitPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComQuitPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComStatisticsPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComStatisticsPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/Connection.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/Connection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/ConnectionConfig.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/ConnectionConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/EmptyPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/EmptyPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/EofPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/EofPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ErrorPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ErrorPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/FakeServer.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/FakeServer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/Field.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/Field.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/FieldPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/FieldPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Handshake.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Handshake.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/HandshakeInitializationPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/HandshakeInitializationPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/License" afterPath="$PROJECT_DIR$/node_modules/mysql/License" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/LocalDataFilePacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/LocalDataFilePacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/Makefile" afterPath="$PROJECT_DIR$/node_modules/mysql/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/OkPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/OkPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/OldPasswordPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/OldPasswordPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/PacketHeader.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/PacketHeader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/PacketWriter.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/PacketWriter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Parser.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Ping.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Ping.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/Pool.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/Pool.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/PoolConfig.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/PoolConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Protocol.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Protocol.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Query.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Query.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Quit.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Quit.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/DAO/annotatio.js" afterPath="$PROJECT_DIR$/lib/DAO/annotatio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/router/api.js" afterPath="$PROJECT_DIR$/lib/router/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/DAO/estadistiques.js" afterPath="$PROJECT_DIR$/lib/DAO/estadistiques.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/DAO/user.js" afterPath="$PROJECT_DIR$/lib/DAO/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/Readme.md" afterPath="$PROJECT_DIR$/node_modules/mysql/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/Readme.md" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/ResultSet.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/ResultSet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ResultSetHeaderPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ResultSetHeaderPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/RowDataPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/RowDataPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Sequence.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Sequence.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/SqlString.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/SqlString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Statistics.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Statistics.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/StatisticsPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/StatisticsPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/UseOldPasswordPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/UseOldPasswordPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/benchmark/analyze.js" afterPath="$PROJECT_DIR$/node_modules/mysql/benchmark/analyze.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/charsets.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/charsets.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/client.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/common.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.json" afterPath="$PROJECT_DIR$/config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/sub/config.json" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/sub/config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/fixtures/data.csv" afterPath="$PROJECT_DIR$/node_modules/mysql/test/fixtures/data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/errors.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/errors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/field_flags.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/field_flags.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/foo.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/foo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/tool/generate-error-constants.js" afterPath="$PROJECT_DIR$/node_modules/mysql/tool/generate-error-constants.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/hello.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/hello.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/index.js" afterPath="$PROJECT_DIR$/node_modules/mysql/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/index.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/index.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/index.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/controllers/main-Controller.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/controllers/main-Controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/make.bat" afterPath="$PROJECT_DIR$/node_modules/mysql/make.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/database/mysql.js" afterPath="$PROJECT_DIR$/lib/database/mysql.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/sub/no.2js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/sub/no.2js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/controllers/notthis.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/controllers/notthis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/controllers/other-Controller.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/controllers/other-Controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/package.json" afterPath="$PROJECT_DIR$/node_modules/mysql/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/package.json" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/package.json" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/benchmark/parse-100k-blog-rows.js" afterPath="$PROJECT_DIR$/node_modules/mysql/benchmark/parse-100k-blog-rows.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/run.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/run.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/benchmark/select-100k-blog-rows.js" afterPath="$PROJECT_DIR$/node_modules/mysql/benchmark/select-100k-blog-rows.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/server_status.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/server_status.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/unit/test-ConnectionConfig.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/unit/test-ConnectionConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/unit/protocol/test-Parser.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/unit/protocol/test-Parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/unit/protocol/test-SqlString.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/unit/protocol/test-SqlString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-bad-credentials.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-bad-credentials.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-bulk-insert.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-bulk-insert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-callback-errors-are-not-caught.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-callback-errors-are-not-caught.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-change-user-fatal-error.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-change-user-fatal-error.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-change-user.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-change-user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-connection-config-flags-affected-rows.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-connection-config-flags-affected-rows.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-connection-config-flags.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-connection-config-flags.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-connection-destroy.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-connection-destroy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-connection-event.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-connection-event.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-connection-limit.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-connection-limit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-custom-query-format.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-custom-query-format.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-custom-typecast.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-custom-typecast.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-destroy-connection.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-destroy-connection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-destroy-while-streaming-rows.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-destroy-while-streaming-rows.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-double-connect.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-double-connect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-drain-event.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-drain-event.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-end-callback.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-end-callback.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-end-empty.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-end-empty.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-escape-id.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-escape-id.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-exception-safety.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-exception-safety.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-auth-error-going-to-all-callbacks.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-auth-error-going-to-all-callbacks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-auth-error-without-handlers.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-auth-error-without-handlers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-network-error-going-to-all-callbacks.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-network-error-going-to-all-callbacks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-network-error-without-handlers.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-network-error-without-handlers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-query-error-without-callback.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-query-error-without-callback.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-get-connection.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-get-connection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-host-denied-error.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-host-denied-error.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-implicit-connect.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-implicit-connect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-insert-results.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-insert-results.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-load-data-infile.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-load-data-infile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-long-stack-traces-for-connection-errors.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-long-stack-traces-for-connection-errors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-long-stack-traces.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-long-stack-traces.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-multiple-statements-streaming.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-multiple-statements-streaming.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-multiple-statements-with-error.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-multiple-statements-with-error.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-multiple-statements.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-multiple-statements.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-nested-tables-query.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-nested-tables-query.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-normal-error-without-handler.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-normal-error-without-handler.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-normal-query-error-without-callback.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-normal-query-error-without-callback.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-old-password.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-old-password.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-ping.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-ping.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-procedure-with-multiple-selects.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-procedure-with-multiple-selects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-procedure-with-single-select.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-procedure-with-single-select.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-after-destroy.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-after-destroy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-after-end-without-callback.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-after-end-without-callback.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-after-end.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-after-end.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-dates-as-strings.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-dates-as-strings.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-escape-id.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-escape-id.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-escaping.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-escaping.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-query.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-query.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-queue-limit.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-queue-limit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-select-1.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-select-1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-select-empty-string.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-select-empty-string.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-send-and-receive-large-packets.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-send-and-receive-large-packets.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-server-timeout-disconnect.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-server-timeout-disconnect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-server-unexpected-disconnect.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-server-unexpected-disconnect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-statistics.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-statistics.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-streaming-rows-quick-pause-resume.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-streaming-rows-quick-pause-resume.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-streaming-rows.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-streaming-rows.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-timezones.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-timezones.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-transaction-commit.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-transaction-commit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-transaction-rollback.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-transaction-rollback.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-type-cast-null-fields.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-type-cast-null-fields.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-type-cast-query.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-type-cast-query.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-type-casting.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-type-casting.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-unix-domain-socket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-unix-domain-socket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-zerofill-results.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-zerofill-results.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/test.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/types.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/types.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/sub/yes.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/sub/yes.js" />
     </list>
     <ignored path="plug_in_nodejs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +176,18 @@
       <file leaf-file-name="annotatorRouting.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/handlers/annotatorRouting.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4735" max-vertical-offset="6528">
-              <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5508" max-vertical-offset="6222">
+              <caret line="347" column="46" selection-start-line="347" selection-start-column="46" selection-end-line="347" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mysql.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/database/mysql.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="318" max-vertical-offset="1241">
+              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -46,11 +195,43 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="poolling.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/database/poolling.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="163" max-vertical-offset="731">
+              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.39144737" vertical-offset="0" max-vertical-offset="304">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1751">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="2057">
+              <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/router/router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,7 +240,7 @@
       <file leaf-file-name="backOfficeRouting.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/handlers/backOfficeRouting.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="1836">
               <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding />
             </state>
@@ -69,7 +250,7 @@
       <file leaf-file-name="user.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/DAO/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1173">
               <caret line="6" column="18" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="18" />
               <folding />
             </state>
@@ -89,18 +270,8 @@
       <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/router/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+            <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="544">
               <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.3" vertical-offset="4216" max-vertical-offset="4675">
-              <caret line="62" column="43" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -126,14 +297,17 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/lib/handlers/annotatorRouting.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/lib/database/poolling.js" />
+        <option value="$PROJECT_DIR$/lib/database/mysql.js" />
+        <option value="$PROJECT_DIR$/config.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="2" />
-    <option name="width" value="1346" />
-    <option name="height" value="726" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -189,57 +363,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plug_in_nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plug_in_nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plug_in_nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plug_in_nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plug_in_nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plug_in_nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="handlers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -261,45 +385,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plug_in_nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plug_in_nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plug_in_nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plug_in_nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demoNodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../anotacions_v2_1" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
@@ -319,14 +411,6 @@
       <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -337,14 +421,12 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
       <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -352,6 +434,16 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -402,26 +494,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="2" width="1346" height="726" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980901" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3210084" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24907063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38499185" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -446,6 +538,30 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/model/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/router/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="544">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4284" max-vertical-offset="4675">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/handlers/annotatorRouting.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3366" max-vertical-offset="6494">
@@ -474,7 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1156">
           <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -482,7 +597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="850">
           <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -506,7 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3376" max-vertical-offset="55369">
           <caret line="277" column="0" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -514,7 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -546,7 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="1462">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -554,7 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="850">
           <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -578,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="38187" max-vertical-offset="55369">
           <caret line="2257" column="65" selection-start-line="2257" selection-start-column="65" selection-end-line="2257" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -586,7 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -618,7 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="1462">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -626,7 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="850">
           <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -674,7 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -704,9 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.084063" vertical-offset="619" max-vertical-offset="1190">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6077058" vertical-offset="347" max-vertical-offset="1224">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,31 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3376" max-vertical-offset="55369">
           <caret line="277" column="0" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="571">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/router/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="571">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/database/mysql.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.041884817" vertical-offset="330" max-vertical-offset="1156">
-          <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -761,14 +837,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6581353" vertical-offset="303" max-vertical-offset="850">
           <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/router/api.js">
+    <entry file="file://$PROJECT_DIR$/lib/handlers/backOfficeRouting.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1836">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -789,36 +864,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/handlers/backOfficeRouting.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1836">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4121" max-vertical-offset="4675">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/router/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/router/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1751">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/handlers/annotatorRouting.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4735" max-vertical-offset="6528">
-          <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="5508" max-vertical-offset="6222">
+          <caret line="347" column="46" selection-start-line="347" selection-start-column="46" selection-end-line="347" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/database/poolling.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="163" max-vertical-offset="731">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/lib/database/mysql.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1751">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="44" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="318" max-vertical-offset="1241">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.3" vertical-offset="4216" max-vertical-offset="4675">
-          <caret line="62" column="43" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.39144737" vertical-offset="0" max-vertical-offset="304">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding />
         </state>
       </provider>

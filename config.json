@@ -5,6 +5,7 @@
     "password": "",
     "database": "annotations",   
     "database_port":3306,
+    "connectionLimit":10,
     "port": 3000
 
 }
