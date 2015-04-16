@@ -3,22 +3,14 @@ Annotator with Nodejs + express + socket.io + MySQL
 
 ##Annotator with Nodejs + express + socket.io + MySQL
 
-<<<<<<< HEAD
-Is a sample and a simple application that uses the Annotateit (http://annotateit.org/) with nodejs and Mysql as a back store. The main aim is create an application for make annotations to the project Guttenberg books.
-=======
 Is a sample and a simple aplication that uses the Annotateit (http://annotateit.org/) with nodejs and Mysql as a back store.
 
->>>>>>> b75bb3256a2241c1876bbd806fdcd58f0f613971
 There is a folder called demoNodejs, this folder contains a  demo and several plug-ins, a category plug-in, store plug-in, and a panel viewer plugin (https://github.com/okfn/annotator/wiki). 
 This application let you store, delete and update annotations, export annotations to PDF, display annotations in a right panel viewer, create annotations with Tinymce, categorize annotations and share annotations.
 
 The annotations are displayed in the right panel with an icon for deleting, editing using TinyMce, and a little eye, it means that the annotations is shared. If you are the owner of the annotations your username is displayed in a white background, if not it is displayed in a gray background.
 
-<<<<<<< HEAD
-The book that will be annotate, could be imported from the Guttenber ebooks in epub format, I've created a parallel project that allow us do that.
-=======
 The documents that you can anotate could be created by hand or usign a paralel tool that I have created, this tool converts a epub (ebook) to HTML5 document that can be annotated. We could import from the Guttenber ebooks in epub format (https://github.com/albertjuhe/epub-to-other-formats).
->>>>>>> b75bb3256a2241c1876bbd806fdcd58f0f613971
 
 This Application uses [annotator 1.2.9] (https://github.com/openannotation/annotator/releases/tag/v1.2.9)
 
@@ -197,6 +189,8 @@ the appender -> filename. C:\\nodejs\\annotator_nodejs_store\\logs\\anotacions.l
 
 ### Database
 
+The back store uses Connection Pooling.
+
 Create the database annotations, database variable..
 ```json
 #C:\nodejs\annotator_nodejs_store\config.json
@@ -206,6 +200,7 @@ Create the database annotations, database variable..
     "user": "root",
     "password": "",
     "database": "annotations",   
+    "connectionLimit":10,
     "database_port":3306,
     ...
 
@@ -218,6 +213,58 @@ Table anotacions where we store annotations.
 Table log where we store the logs.
 Table last-login. Last login to the backoffice
 Table users: Back office users
+
+#### Connection Pooling
+
+The connections Pooling are in the folder lib/database/pooling.js and mysql.js.
+
+In the file pooling.js we load the pool configuration, in the variable poolData we store the parameters, on of this parameters is very important for the pool, this parameter is connectionLimit: The maximum number of connections to create at once, default: 10.
+
+```
+ var poolData = {
+        host: config.server,
+        database: config.database,
+        user: config.user,
+        password: config.password,
+        port: config.database_port,
+        connectionLimit: config.connextionLimit
+    };
+
+    var pool = mysql.createPool(poolData);
+
+    exports.getConnection = function (callback) {
+        pool.getConnection(function (err, connection) {
+            callback(err, connection);
+        });
+    };
+```
+After the configuration data we create the pool mysq.createPool(..) and finally we create a connection manager called getConnectio.
+
+This class is used in the mysql.js file to execute queries, var mysqlPooling = require('../database/poolling');
+
+```
+var mysqlPooling = require('../database/poolling');
+
+var MySQL = function(){
+....
+ var query = function(str,callback){
+        mysqlPooling.getConnection(function(err, conn){
+            conn.query( str,  function(err, rows,fields){
+                if(err)	{
+                    throw err;
+                }else{
+                    callback(err,rows,fields);
+                }
+            });
+            conn.release();
+        })
+    };
+    ...
+        return {query:query,clean:clean}
+};
+module.exports = MySQL;
+```
+Inside this class we have created a functions that manage Queries, its important to release the connection after using it.
 
 ### Execute
 
