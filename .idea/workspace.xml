@@ -2,155 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b1b52a-83c1-4e07-8ec0-8a13c9ada326" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/database/poolling.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/.npmignore" afterPath="$PROJECT_DIR$/node_modules/mysql/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/mysql/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Auth.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/ChangeUser.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/ChangeUser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/Changes.md" afterPath="$PROJECT_DIR$/node_modules/mysql/Changes.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ClientAuthenticationPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ClientAuthenticationPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComChangeUserPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComChangeUserPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComPingPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComPingPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComQueryPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComQueryPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComQuitPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComQuitPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComStatisticsPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ComStatisticsPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/Connection.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/Connection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/ConnectionConfig.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/ConnectionConfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/EmptyPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/EmptyPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/EofPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/EofPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ErrorPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ErrorPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/FakeServer.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/FakeServer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/Field.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/Field.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/FieldPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/FieldPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Handshake.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Handshake.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/HandshakeInitializationPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/HandshakeInitializationPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/License" afterPath="$PROJECT_DIR$/node_modules/mysql/License" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/LocalDataFilePacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/LocalDataFilePacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/Makefile" afterPath="$PROJECT_DIR$/node_modules/mysql/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/OkPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/OkPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/OldPasswordPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/OldPasswordPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/PacketHeader.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/PacketHeader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/PacketWriter.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/PacketWriter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Parser.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Ping.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Ping.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/Pool.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/Pool.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/PoolConfig.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/PoolConfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Protocol.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Protocol.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Query.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Query.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Quit.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Quit.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/Readme.md" afterPath="$PROJECT_DIR$/node_modules/mysql/Readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/Readme.md" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/Readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/ResultSet.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/ResultSet.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ResultSetHeaderPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/ResultSetHeaderPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/RowDataPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/RowDataPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Sequence.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Sequence.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/SqlString.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/SqlString.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Statistics.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Statistics.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/StatisticsPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/StatisticsPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/UseOldPasswordPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/UseOldPasswordPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/benchmark/analyze.js" afterPath="$PROJECT_DIR$/node_modules/mysql/benchmark/analyze.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/charsets.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/charsets.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/client.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/common.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.json" afterPath="$PROJECT_DIR$/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/sub/config.json" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/sub/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/fixtures/data.csv" afterPath="$PROJECT_DIR$/node_modules/mysql/test/fixtures/data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/errors.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/errors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/field_flags.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/field_flags.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/foo.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/foo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/tool/generate-error-constants.js" afterPath="$PROJECT_DIR$/node_modules/mysql/tool/generate-error-constants.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/hello.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/hello.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/index.js" afterPath="$PROJECT_DIR$/node_modules/mysql/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/index.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/index.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/index.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/controllers/main-Controller.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/controllers/main-Controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/make.bat" afterPath="$PROJECT_DIR$/node_modules/mysql/make.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/database/mysql.js" afterPath="$PROJECT_DIR$/lib/database/mysql.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/sub/no.2js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/sub/no.2js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/controllers/notthis.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/controllers/notthis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/controllers/other-Controller.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/controllers/other-Controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/package.json" afterPath="$PROJECT_DIR$/node_modules/mysql/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/package.json" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/package.json" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/benchmark/parse-100k-blog-rows.js" afterPath="$PROJECT_DIR$/node_modules/mysql/benchmark/parse-100k-blog-rows.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/run.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/run.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/benchmark/select-100k-blog-rows.js" afterPath="$PROJECT_DIR$/node_modules/mysql/benchmark/select-100k-blog-rows.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/server_status.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/server_status.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/unit/test-ConnectionConfig.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/unit/test-ConnectionConfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/unit/protocol/test-Parser.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/unit/protocol/test-Parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/unit/protocol/test-SqlString.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/unit/protocol/test-SqlString.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-bad-credentials.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-bad-credentials.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-bulk-insert.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-bulk-insert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-callback-errors-are-not-caught.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-callback-errors-are-not-caught.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-change-user-fatal-error.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-change-user-fatal-error.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-change-user.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-change-user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-connection-config-flags-affected-rows.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-connection-config-flags-affected-rows.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-connection-config-flags.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-connection-config-flags.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-connection-destroy.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-connection-destroy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-connection-event.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-connection-event.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-connection-limit.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-connection-limit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-custom-query-format.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-custom-query-format.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-custom-typecast.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-custom-typecast.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-destroy-connection.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-destroy-connection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-destroy-while-streaming-rows.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-destroy-while-streaming-rows.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-double-connect.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-double-connect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-drain-event.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-drain-event.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-end-callback.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-end-callback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-end-empty.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-end-empty.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-escape-id.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-escape-id.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-exception-safety.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-exception-safety.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-auth-error-going-to-all-callbacks.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-auth-error-going-to-all-callbacks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-auth-error-without-handlers.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-auth-error-without-handlers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-network-error-going-to-all-callbacks.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-network-error-going-to-all-callbacks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-network-error-without-handlers.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-network-error-without-handlers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-query-error-without-callback.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-fatal-query-error-without-callback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-get-connection.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-get-connection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-host-denied-error.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-host-denied-error.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-implicit-connect.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-implicit-connect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-insert-results.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-insert-results.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-load-data-infile.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-load-data-infile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-long-stack-traces-for-connection-errors.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-long-stack-traces-for-connection-errors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-long-stack-traces.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-long-stack-traces.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-multiple-statements-streaming.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-multiple-statements-streaming.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-multiple-statements-with-error.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-multiple-statements-with-error.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-multiple-statements.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-multiple-statements.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-nested-tables-query.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-nested-tables-query.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-normal-error-without-handler.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-normal-error-without-handler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-normal-query-error-without-callback.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-normal-query-error-without-callback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-old-password.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-old-password.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-ping.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-ping.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-procedure-with-multiple-selects.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-procedure-with-multiple-selects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-procedure-with-single-select.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-procedure-with-single-select.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-after-destroy.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-after-destroy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-after-end-without-callback.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-after-end-without-callback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-after-end.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-after-end.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-dates-as-strings.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-dates-as-strings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-escape-id.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-escape-id.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-escaping.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-query-escaping.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-query.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-query.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-queue-limit.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/pool/test-queue-limit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-select-1.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-select-1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-select-empty-string.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-select-empty-string.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-send-and-receive-large-packets.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-send-and-receive-large-packets.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-server-timeout-disconnect.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-server-timeout-disconnect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-server-unexpected-disconnect.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-server-unexpected-disconnect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-statistics.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-statistics.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-streaming-rows-quick-pause-resume.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-streaming-rows-quick-pause-resume.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-streaming-rows.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-streaming-rows.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-timezones.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-timezones.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-transaction-commit.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-transaction-commit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-transaction-rollback.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-transaction-rollback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-type-cast-null-fields.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-type-cast-null-fields.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-type-cast-query.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-type-cast-query.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-type-casting.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-type-casting.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-unix-domain-socket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-unix-domain-socket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-zerofill-results.js" afterPath="$PROJECT_DIR$/node_modules/mysql/test/integration/connection/test-zerofill-results.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/test.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/types.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/sub/yes.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/require-all/test/mydir/sub/yes.js" />
     </list>
     <ignored path="plug_in_nodejs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -207,11 +59,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.json" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="config.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39144737" vertical-offset="0" max-vertical-offset="304">
+            <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="289">
               <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.71885" vertical-offset="6352" max-vertical-offset="6817">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -232,16 +97,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="backOfficeRouting.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/handlers/backOfficeRouting.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="1836">
-              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -502,7 +357,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24907063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38499185" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38499185" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -864,17 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4121" max-vertical-offset="4675">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/router/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
@@ -929,8 +773,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39144737" vertical-offset="0" max-vertical-offset="304">
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="289">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.71885" vertical-offset="6352" max-vertical-offset="6817">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -3,13 +3,22 @@ Annotator with Nodejs + express + socket.io + MySQL
 
 ##Annotator with Nodejs + express + socket.io + MySQL
 
+<<<<<<< HEAD
 Is a sample and a simple application that uses the Annotateit (http://annotateit.org/) with nodejs and Mysql as a back store. The main aim is create an application for make annotations to the project Guttenberg books.
+=======
+Is a sample and a simple aplication that uses the Annotateit (http://annotateit.org/) with nodejs and Mysql as a back store.
+
+>>>>>>> b75bb3256a2241c1876bbd806fdcd58f0f613971
 There is a folder called demoNodejs, this folder contains a  demo and several plug-ins, a category plug-in, store plug-in, and a panel viewer plugin (https://github.com/okfn/annotator/wiki). 
 This application let you store, delete and update annotations, export annotations to PDF, display annotations in a right panel viewer, create annotations with Tinymce, categorize annotations and share annotations.
 
 The annotations are displayed in the right panel with an icon for deleting, editing using TinyMce, and a little eye, it means that the annotations is shared. If you are the owner of the annotations your username is displayed in a white background, if not it is displayed in a gray background.
 
+<<<<<<< HEAD
 The book that will be annotate, could be imported from the Guttenber ebooks in epub format, I've created a parallel project that allow us do that.
+=======
+The documents that you can anotate could be created by hand or usign a paralel tool that I have created, this tool converts a epub (ebook) to HTML5 document that can be annotated. We could import from the Guttenber ebooks in epub format (https://github.com/albertjuhe/epub-to-other-formats).
+>>>>>>> b75bb3256a2241c1876bbd806fdcd58f0f613971
 
 This Application uses [annotator 1.2.9] (https://github.com/openannotation/annotator/releases/tag/v1.2.9)
 
@@ -51,27 +60,110 @@ In the annotator display panel you can see the users that are currently viewing 
 
 ##Installation
 
-You need install several in the nodejs folder package before start (npm install):
+### Download basics
+First you have to install nodejs [http://nodejs.org/download/]. (For example I have installed in C:\nodejs).
+
+This aplication uses MySQL and Apache 4.2.2, you need to install Xampp [https://www.apachefriends.org/index.html], Wampp [http://www.wampserver.com/en/], or similar software. Xampp and Wampp installs Apache, MySQL, PHP, phpMyAdmin and Perl.
+
+### Download project
+There are two ways to download the project: Using Git clone or download the last Release.
+* With Git you first need to have installed the Git and execute from the command line 
+```
+c:\nodejs\>git clone https://github.com/albertjuhe/annotator_nodejs_store.git
+```
+* Download the last release. Its in Zip format you have to unzip it, for example inside de nodejs folder c:\nodejs\annotator_nodejs_store.
+
+The file that needs to start the aplication is app.js. If you try to execute the project with:
+```
+node app.js
+```
+Node likely throw and exception like this:
+```
+C:\nodejs\annotator_nodejs_store>node app.js
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module 'log4js'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Module.require (module.js:364:17)
+    at require (module.js:380:17)
+    at Object.<anonymous> (C:\nodejs\annotator_nodejs_store\app.js:24:14)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Function.Module.runMain (module.js:497:10)
+ ```
+Because need some external libraries (modules). In this case node says that can't find log4js module, to figure out this you need to install node modules.
+
+### Install node modules
+
+Now you need to install all the libraries (modules) that needs the aplication to work. 
+Use the sentence 
+c:\nodejs\> install -g [module] or c:\nodejs\annotator_nodejs_store> install [module]
+You need install this modules:
 - express (http://expressjs.com/)
-- i18n (https://github.com/mashpie/i18n-node)
-- log4js (https://github.com/nomiddlename/log4js-node)
+```
+c:\nodejs\annotator_nodejs_store>npm install express --save
+```
+- i18n (https://github.com/mashpie/i18n-node). This modules for work with different languages.
+```
+c:\nodejs\annotator_nodejs_store>npm install i18n
+```
+- log4js (https://github.com/nomiddlename/log4js-node). This module stores a log message similar to log4j (java).
+```
+c:\nodejs\annotator_nodejs_store>npm install log4js
+```
 - underscore
 - mysql
-- hasids
+```
+c:\nodejs\annotator_nodejs_store>npm install mysql
+```
+- hashids. Used to generate unique key.
+```
+c:\nodejs\annotator_nodejs_store>npm install hashids
+```
 - http
 - request
 - wkhtmltopdf (Export annotaions to PDF format) (https://www.npmjs.org/package/wkhtmltopdf)
 - socket.io (http://socket.io/) Who is reading the content. Chat rooms in the future.
-- passport
+- passport [http://passportjs.org/], Simple, unobtrusive authentication for Node.js
+```
+c:\nodejs\annotator_nodejs_store>npm install passport
+```
+- bcrypt-nodejs. Used for passport module
+```
+c:\nodejs\annotator_nodejs_store>npm install bcrypt-nodejs
+```
+- passport-local. Used for passport module
+```
+c:\nodejs\annotator_nodejs_store>npm install passport-local
+```
 - ejs
 - connect-flash
+```
+c:\nodejs\annotator_nodejs_store>npm install connect-flash
+```
 - multer (upload files)
 - express-namespace //Namespaces in express routes
 
-Copy the content of the github into the nodejs folder.
-Inside this folder there is a file called config.json, is the config file.
+For the PDF export anotations, firts install wkhtmltopdf (https://www.npmjs.com/package/wkhtmltopdf) and configure it, follow the web site instructions.
+
+### Config project
+
+Inside the app.js there is an important variable: __dirname, is the folder where nodejs search css,js and images.
+```
+__dirname = 'C:\\nodejs\\annotator_nodejs_store\\demoNodejs\\';
+```
+
+The documents that have to be annotated must be copied to the http://localhost/demoNodejs/ (C:\wamp_server\www\demoNodejs) folder.
+
+Inside this folder c:\nodejs\annotator_nodejs_store\config.json there is a file called config.json, is the config file.
 
 ```json
+#C:\nodejs\annotator_nodejs_store\config.json
  {
     "materials": "http://localhost/demoNodejs/",
     "server": "localhost",
@@ -84,30 +176,69 @@ Inside this folder there is a file called config.json, is the config file.
 }
 ```
 
-* materials: URL where we can find documents.
+* materials: URL where we can find documents that will be annotated (for this reason needs xampp or wampp). In this case, http://localhost/demoNodejs/, if you have wampp installed in the C:\wamp_server folder the folder http://localhost/demoNodejs/ will be C:\wamp_server\www\demoNodejs.
 * server: database server
 * user:database user
 * password: database password
-* port: port where we can find the aplication
+* port: port where we can find the aplication (Ex:3000) the application works in the port number 3000.
 
-You have to copy the folder: demoNodejs into your http server (ex:C:\wamp_server\www\demoNodejs).
-
-For the PDF export anotations, firts install wkhtmltopdf and configure it, follow the web site instructions.
-After this you have to update the app.js file, you have to change the line:
-
-```nodejs
- __dirname = 'C:\\wamp_server\\www\\demoNodejs\\';
+Log4js config:
 ```
+// Logger configuration
+log4js.configure({
+ appenders: [
+   { type: 'console', category: 'loggerAnotacionsConsole' },
+   { type: 'file', filename: './logs/anotacions.log', category: 'loggerAnotacionsFile' }
+  ]
+});
+```
+We need this folder and file to store logs:
+the appender -> filename. C:\\nodejs\\annotator_nodejs_store\\logs\\anotacions.log. 
 
- and change for the folder where are the js,css,locale,etc..., if you follow the installation steps you can't change this line.
+### Database
 
- Inside the sql folder you can find the database sample structure that I have created, open the sql files and execute the content in a mysql database.
+Create the database annotations, database variable..
+```json
+#C:\nodejs\annotator_nodejs_store\config.json
+ {
+    ...
+    "server": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "annotations",   
+    "database_port":3306,
+    ...
 
-The file that you have to execute is app.js, ex:nodejs folder_name/app.js and from the browser, If you haven't change the port, with http://localhost:3000/annotation/testuser/demo.html, if you want to test with diferent user only change the username.
+}
+```
+Inside the c:\nodejs\annotator_nodejs_store\sql folder you can find the database sample structure that I have created, open the sql files and execute the content in a annotations mysql database.
 
-demo.html is the file that you can find inside the demoNodejs, you can copy other files inside this folder and put the annotateit javascript inside to test with other files.
+There are two tables:
+Table anotacions where we store annotations.
+Table log where we store the logs.
+Table last-login. Last login to the backoffice
+Table users: Back office users
 
-After the excution you can find a log files in the log folder.
+### Execute
+
+The file that you have to execute is app.js (c:\nodejs\nodejs annotator_nodejs_store\app.js).
+```
+(c:\nodejs\nodejs annotator_nodejs_store\node app.js
+```
+In the console you must view
+```
+[2015-01-01 11:18:40.998] [DEBUG] loggerAnotacionsConsole - Loaded.3000
+   info  - socket.io started
+ ```
+ 
+and from the browser, If you haven't change the port, with http://localhost:3000/annotation/testuser/demo.html, if you want to test with diferent user only change the username (testuser).
+
+###PDF
+Install wkhtmltopdf (http://wkhtmltopdf.org/downloads.html). (ex: c:\wkhtmltopdf).
+
+To export the annotatios to pdf you need to configure the PATH (environment variables) to c:\wkhtmltopdf\bin.
+
+### Annotatorjs config
 
 Inside the file demoNodejs/demoNodejs/js/annotator_init.js you can find the plug-ins configuration for annotations.
 
@@ -254,11 +385,6 @@ The Back office Routing is in the backOfficeRouting.js, to control user access w
 Passport needs several functions to control user access as passport.serializeUser, passport.deserializeUser and isLoggedIn.
 All this functions uses the UserController (DAO/user.js) class and the user model (model/user.js) to control Users using MySQL. For encription we use bcrypt-nodejs library.
 
-##Database
-
-there are two tables:
-Table anotacions where we store annotations.
-Table log where we store the logs.
 
 
 
