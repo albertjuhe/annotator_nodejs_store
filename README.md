@@ -266,6 +266,9 @@ module.exports = MySQL;
 ```
 Inside this class we have created a functions that manage Queries, its important to release the connection after using it.
 
+If you get an error with the conn.release, this is because you have to update your mysql module and install:
+>npm install mysql@2.0.0-alpha9
+
 ### Execute
 
 The file that you have to execute is app.js (c:\nodejs\nodejs annotator_nodejs_store\app.js).
