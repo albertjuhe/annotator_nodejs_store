@@ -289,6 +289,24 @@ Install wkhtmltopdf (http://wkhtmltopdf.org/downloads.html). (ex: c:\wkhtmltopdf
 
 To export the annotatios to pdf you need to configure the PATH (environment variables) to c:\wkhtmltopdf\bin.
 
+### Share annotations
+
+You could share an annotation with other user, with the share icon. This icon generates a tinyURL, (http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/share/207aNlj9),when you press to this url the system show you the annotaion inside the document isolated.
+
+This tinyUrls is generated using the module Hashids in the nodejs, 
+
+```
+var hashids = new Hashids("shared_annotations", 8)
+var hashid = req.params.hashid;
+var annotationId = hashids.decrypt(hashid);
+```
+In the javascript we use the plugin https://github.com/albertjuhe/Share-annotations-with-SmallUrl-for-Annotatorjs, that generates the tinyURL using the same lib than the nodejs.
+
+```
+  var hashids = new Hashids("shared_annotations",8);   
+  var data = hashids.encrypt(parseInt(viewer.annotations[0].id));
+```
+
 ### Annotatorjs config
 
 Inside the file demoNodejs/demoNodejs/js/annotator_init.js you can find the plug-ins configuration for annotations.
