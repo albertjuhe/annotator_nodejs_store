@@ -163,6 +163,7 @@ Inside this folder c:\nodejs\annotator_nodejs_store\config.json there is a file 
     "password": "",
     "database": "annotations",   
     "database_port":3306,
+    "connectionLimit":10,
     "port": 3000
 
 }
