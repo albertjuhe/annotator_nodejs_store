@@ -16,18 +16,18 @@ This Application uses [annotator 1.2.9] (https://github.com/openannotation/annot
 
 ##Complete Demo
 
-[Demo Frankenstein](http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/mary/demo.html)
+[Demo Frankenstein](http://ec2-35-164-12-68.us-west-2.compute.amazonaws.com:3060/annotation/mary/demo.html)
 
 Its a completely opened demo, you can use all the users that you want without security, its a demo.
 If you want to change the user, you only have to change the user in the URL:
-http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/user/demo.html
+http://ec2-35-164-12-68.us-west-2.compute.amazonaws.com:3060/annotation/user/demo.html
 
-I've created a [mary](http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/mary/demo.html) and [testuser] (http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/testuser/demo.html).
+I've created a [mary](http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/mary/demo.html) and [testuser] (http://ec2-35-164-12-68.us-west-2.compute.amazonaws.com:3060/annotation/testuser/demo.html).
 
 The HTML that we can annotate is an especial HTML5 format, we can achieve this format using an [epub to other formats project](https://github.com/albertjuhe/epub-to-other-formats), this project convert epub, from the [Guttenberg Library](http://www.gutenberg.org/) to other formats, in our case we need the HTML5 annotation format.
 
 There is a backend to view statistics about annotations added, this back end has been developed using [passport] (http://passportjs.org/) and ejs for templating. The backend is in http://localhost:3000/login
-http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/login
+http://ec2-35-164-12-68.us-west-2.compute.amazonaws.com:3060/login
 
 You can enter to the admin using http://localhost:3000/login user:testAdmin and password:password.
 
@@ -291,7 +291,7 @@ To export the annotatios to pdf you need to configure the PATH (environment vari
 
 ### Share annotations
 
-You could share an annotation with other user, with the share icon. This icon generates a tinyURL, (http://ec2-54-191-181-65.us-west-2.compute.amazonaws.com:3060/annotation/share/207aNlj9),when you press to this url the system show you the annotaion inside the document isolated.
+You could share an annotation with other user, with the share icon. This icon generates a tinyURL, (http://ec2-35-164-12-68.us-west-2.compute.amazonaws.com:3060/annotation/share/207aNlj9),when you press to this url the system show you the annotaion inside the document isolated.
 
 This tinyUrls is generated using the module Hashids in the nodejs, 
 
